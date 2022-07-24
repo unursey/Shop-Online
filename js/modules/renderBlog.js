@@ -15,7 +15,9 @@ const renderGoods = async (page, pageNum) => {
   const data = await loadGoods(page);
   const blogArticle = document.createElement("div");
   blogArticle.className = "blog__article";
-  console.log(data);
+
+  const allPageNums = data.meta.pagination.pages;
+  console.log(allPageNums)
 
   const goods = data.data.map((item) => {
     const cart = document.createElement("div");
@@ -39,35 +41,48 @@ const renderGoods = async (page, pageNum) => {
   blogArticle.append(...goods);
   document.querySelector(".blog__container").append(blogArticle);
 
-  renderPagination(+pageNum);
+  renderPagination(+pageNum, allPageNums);
 };
 
-const renderPagination = (pageNum) => {
+const renderPagination = (pageNum, allPageNums) => {
+  let firstPage = pageNum - 1;
+  let firstTextPage = firstPage;
+
+  const activePage = pageNum;
+  const activeTextPage = activePage;
+
+  let lastPage = pageNum + 1;
+  let lastTextPage = lastPage;
+
+  if (pageNum === 1) {
+    firstPage = allPageNums;
+    firstTextPage = '...'
+  }
+
+  if (pageNum === allPageNums) {
+    lastPage = 1;
+    lastTextPage = 1;
+  }
+
   const pagination = document.createElement("div");
   pagination.className = "blog__pagination pagination";
 
   pagination.innerHTML = `
-        <button class="pagination__left" aria-label="left">
+        <a href="?page=${firstPage}" class="pagination__left" aria-label="left">
             <svg tabindex="0" class="pagination__img" width="37" height="37" viewBox="0 0 37 37" fill="#8F8F8F" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32.375 16.9583H10.5296L16.0487 11.4237L13.875 9.25L4.625 18.5L13.875 27.75L16.0487 25.5763L10.5296 20.0417H32.375V16.9583Z" fill="#8F8F8F"/>
             </svg>                    
-        </button>
-
+        </a>
         <div class="pagination__num-list">
-            <a href="?page=${pageNum - 1}" class="pagination__num">${
-    pageNum - 1
-  }</a>
-            <a href="?page=${pageNum}"class="pagination__num">${pageNum}</a>
-            <a href="?page=${pageNum + 1}" class="pagination__num">${
-    pageNum + 1
-  }</a>
+            <a href="?page=${firstPage}" class="pagination__num">${firstTextPage}</a>
+            <a href="?page=${activePage}"class="pagination__num pagination__num_active">${activeTextPage}</a>
+            <a href="?page=${lastPage}" class="pagination__num">${lastTextPage}</a>
         </div>
-
-        <button class="pagination__right" aria-label="right">
+        <a href="?page=${lastPage}" class="pagination__right" aria-label="right">
             <svg tabindex="0" class="pagination__img" width="37" height="37" viewBox="0 0 37 37" fill="#8F8F8F" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.625 16.9583H26.4704L20.9513 11.4237L23.125 9.25L32.375 18.5L23.125 27.75L20.9513 25.5763L26.4704 20.0417H4.625V16.9583Z" fill="#3670C7"/>
-        </svg>              
-        </button>
+              <path d="M4.625 16.9583H26.4704L20.9513 11.4237L23.125 9.25L32.375 18.5L23.125 27.75L20.9513 25.5763L26.4704 20.0417H4.625V16.9583Z" fill="#3670C7"/>
+            </svg>              
+        </a>
         `;
   document.querySelector(".blog__container").append(pagination);
 };
@@ -82,24 +97,30 @@ export const renderArticle = async (id) => {
  
   const data = await loadGoods(id);
   const user = await loadUsers(data.data.user_id);
-  console.log(user);
 
-  const article = document.createElement("div");
-  article.className = "article";
+  const article = document.createElement("article");
+  article.className = "article__container";
 
   article.innerHTML = `
-    <article class="article">
-        <h1 class="page__title">${data.data.title}</h1>
-        <p class="articles__text">${data.data.body}</p>
+    <p class="article__text article__text-header"><a href="/index.html">Главная</a> > <a href="/blog.html${backPage}">Блог</a> > ${data.data.title}</p>
+    <h1 class="page__title">${data.data.title}</h1>
+    <p class="article__text">${data.data.body}</p>
 
-        <a class="articles__link-back" href='/blog.html${backPage}'>К списку статей</a>
+    <div class="article__link-block">
+        <a class="article__link-back" href='/blog.html${backPage}'>К списку статей</a>
 
-        <a class="articles__link-author">${user.data.name}</a>
+        <div class="article__author">
+          <a class="article__link-author">${user.data.name}</a>
+          <p class="article__date">22 октября 2021, 12:45</p>
+          <div class="article__reaction">
+            <a class="article__views">0К</a>
+            <a class="article__comments">0</a>
+          </div>
+          </div>
+    </div>    
+    `;
  
-      </article>
-        `;
-
-  document.querySelector(".article__container").append(article);
+  document.querySelector(".article").append(article);
 };
 
 export const createPage = () => {
@@ -115,7 +136,6 @@ export const createPage = () => {
     }
 
     renderGoods(page, pageNum);
-
     sessionStorage.setItem('backurl', page);
   }
 };
@@ -125,7 +145,6 @@ export const createArticle = () => {
     let params = new URL(document.location).searchParams;
     let id = "/" + params.get("id");
     renderArticle(id);
-
   }
 };
 
