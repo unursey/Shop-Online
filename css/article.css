@@ -1,0 +1,58 @@
+.article {
+  max-width: 1240px;
+  padding: 0 67px;
+}
+
+.page__title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 65px;
+  color: #454545;
+  margin-top: 5px;
+}
+
+.article__subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.article__text {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.article__text-title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.article__list{
+  padding-left: 0;
+  margin: 50px 0;
+}
+
+.article__item {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.article__link {
+  text-decoration: none;
+  color: #828282;
+}
+
+.article__link:hover{
+  color: #454545;
+}
+

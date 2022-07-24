@@ -6,7 +6,7 @@
 .blog__article {
     display: flex;
     max-width: 1433px;
-    gap: 50px 50px;
+    gap: 50px 25px;
     justify-content: space-between;
     padding: 100px 0;
     margin: 0 auto;

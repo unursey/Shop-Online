@@ -1,0 +1,36 @@
+.ad {
+  padding: 0 67px;
+}
+
+.card {
+  max-width: 530px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.card_bg_travel {
+  background-image: url("../img/ad/aside-travel.jpg");
+}
+
+.card_bg_car {
+  background-image: url("../img/ad/aside-car.jpg");
+}
+
+.card__text {
+  font-family: Lato, serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+  padding: 10px 110px 30px 30px;
+}
+
+.card__title {
+  font-family: Lato, serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  color: white;
+  padding: 230px 110px 0 30px;
+}
