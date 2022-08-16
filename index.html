@@ -20,7 +20,7 @@
       crossorigin
     />
 
-    <title>Modul06 Lesson02</title>
+    <title>Modul07 Lesson01</title>
     <script type="module" src="./js/script.js"></script>
 
     <link rel="stylesheet" href="css/style.css" />
@@ -37,7 +37,7 @@
           />
         </div>
 
-        <button class="header__button-nav">Меню</button>
+        <button class="header__button-nav" aria-haspopup="menu" aria-label="Открыть меню">Меню</button>
 
         <form class="header__form-search form-search">
           <label>
@@ -131,102 +131,359 @@
 
     <main>
       <h1 class="visually-hidden">Сайт онлайн магазина ShopOnline</h1>
+
       <section class="present">
         <div class="container present__container">
-          <figure class="present__gallery present__gallery-one">
+          <a href="#" class="present__gallery present__gallery-one">
             <img
               class="present__img"
               src="img/present/timer.jpg"
               alt="Ноутбуки"
             />
-            <figcaption class="present__text present__text-one">
+            <p class="present__text present__text-one">
               -50% на все ноутбуки
-            </figcaption>
+            </p>
 
             <div class="present__timer" data-timer-deadline="10/08/2022 03:00"></div>
-          </figure>
+          </a>
 
-          <figure class="present__gallery present__gallery-two">
+          <a href="#" class="present__gallery present__gallery-two">
             <img class="present__img" src="img/present/1.jpg" alt="Книга" />
-            <figcaption class="present__text present__text-two">
+            <p class="present__text present__text-two">
               <span class="present__text_bold">Книга –</span> лучший подарок
-            </figcaption>
-          </figure>
+            </p>
+          </a>
 
-          <figure class="present__gallery present__gallery-three">
+          <a href="#" class="present__gallery present__gallery-three">
             <img
               class="present__img"
               src="img/present/2.jpg"
               alt="Время скидок"
             />
-            <figcaption class="present__text present__text-three">
+            <p class="present__text present__text-three">
               Время скидок!
-            </figcaption>
-          </figure>
+            </p>
+          </a>
 
-          <div class="present__gallery present__gallery-four">
+          <a href="#" class="present__gallery present__gallery-four">
             <img class="present__img" src="img/present/3.jpg" alt="Обувь" />
-          </div>
+          </a>
 
-          <figure class="present__gallery present__gallery-five">
+          <a href="#" class="present__gallery present__gallery-five">
             <img class="present__img" src="img/present/4.jpg" alt="Кроссовки" />
-            <figcaption class="present__text present__text-five">
+            <p class="present__text present__text-five">
               Вторая пара кроссовок
               <span class="present__text_big">в&nbspподарок!</span>
-            </figcaption>
-          </figure>
+            </p>
+          </a>
 
-          <figure class="present__gallery present__gallery-six">
+          <a href="#" class="present__gallery present__gallery-six">
             <img class="present__img" src="img/present/5.jpg" alt="Подарки" />
-            <figcaption class="present__text present__text-six">
+            <p class="present__text present__text-six">
               Идеи новогодних подарков
-            </figcaption>
-          </figure>
+            </p>
+          </a>
 
-          <figure class="present__gallery present__gallery-seven">
+          <a href="#" class="present__gallery present__gallery-seven">
             <img class="present__img" src="img/present/6.jpg" alt="Техника" />
-            <figcaption class="present__text present__text-seven">
+            <p class="present__text present__text-seven">
               Выгодно в декабре!
-            </figcaption>
-          </figure>
+            </p>
+          </a>
 
-          <figure class="present__gallery present__gallery-eight">
+          <a href="#" class="present__gallery present__gallery-eight">
             <img
               class="present__img"
               src="img/present/7.jpg"
               alt="Украшения на Новый год"
             />
-            <figcaption class="present__text present__text-eight">
+            <p class="present__text present__text-eight">
               Новогодние украшения
-            </figcaption>
-          </figure>
+            </p>
+          </a>
 
-          <div class="present__gallery present__gallery-nine">
+          <a href="#" class="present__gallery present__gallery-nine">
             <img class="present__img" src="img/present/8.jpg" alt="Одежда" />
-          </div>
+          </a>
 
-          <figure class="present__gallery present__gallery-ten">
+          <a href="#" class="present__gallery present__gallery-ten">
             <img
               class="present__img"
               src="img/present/9.jpg"
               alt="Бытовая химия"
             />
-            <figcaption class="present__text present__text-ten">
+            <p class="present__text present__text-ten">
               На бытовую химию
-            </figcaption>
-          </figure>
+            </p>
+          </a>
 
-          <div class="present__gallery present__gallery-eleven">
+          <a href="#"  class="present__gallery present__gallery-eleven">
             <img
               class="present__img present__img_transform_scale"
               src="img/present/10.jpg"
               alt="Елочные украшения"
             />
-          </div>
+          </a>
         </div>
+      </section>
+
+      <section class="profit"> 
+        <div class="container">
+          <h2 class="profit__title">Это выгодно!</h2>
+
+          <div class="profit__wrapper">
+            <a href="#" class="profit__gallery profit__gallery-one">
+              <img
+                class="profit__img"
+                src="img/profit/t-shirts.jpg"
+                alt="Две белые футболки"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">1299 ₽</span>
+                  <span class="profit__old-price">2598 ₽</span>
+                </div>        
+                <span class="profit__desc">Пара футболок</span>
+              </p>
+            </a>
+  
+            <a href="#" class="profit__gallery profit__gallery-two">
+              <img
+                class="profit__img"
+                src="img/profit/shoes.jpg"
+                alt="Кроссовки найк белые с оранжевыми вставками"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">2099 ₽</span>
+                  <span class="profit__old-price">5938 ₽</span>
+                </div>        
+                <span class="profit__desc">Кроссовки</span>
+              </p>
+            </a>
+  
+            <a href="#" class="profit__gallery profit__gallery-three">
+              <img
+                class="profit__img"
+                src="img/profit/bedSheets.jpg"
+                alt="Комплект двуспального белья"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">3902 ₽</span>
+                  <span class="profit__old-price">4490 ₽</span>
+                </div>        
+                <span class="profit__desc">Постельное белье</span>
+              </p>
+            </a>
+  
+            <a href="#" class="profit__gallery profit__gallery-four">
+              <img
+                class="profit__img"
+                src="img/profit/hairdryer.jpg"
+                alt="Белый проводной фен"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">2999 ₽</span>
+                  <span class="profit__old-price">6030 ₽</span>
+                </div>        
+                <span class="profit__desc">Фен</span>
+              </p>
+            </a>
+  
+            <a href="#" class="profit__gallery profit__gallery-five">
+              <img
+                class="profit__img"
+                src="img/profit/bedSheets.jpg"
+                alt="Комплект двуспального белья"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">3902 ₽</span>
+                  <span class="profit__old-price">4490 ₽</span>
+                </div>        
+                <span class="profit__desc">Постельное белье</span>
+              </p>
+            </a>
+  
+            <a href="#" class="profit__gallery profit__gallery-six">
+              <img
+                class="profit__img"
+                src="img/profit/hairdryer.jpg"
+                alt="Белый проводной фен"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">2999 ₽</span>
+                  <span class="profit__old-price">6030 ₽</span>
+                </div>        
+                <span class="profit__desc">Фен</span>
+              </p>
+            </a>
+  
+            <a href="#" class="profit__gallery profit__gallery-seven">
+              <img
+                class="profit__img"
+                src="img/profit/mittens.jpg"
+                alt="Коричневые варежки в виде мишек"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">540 ₽</span>
+                  <span class="profit__old-price">890 ₽</span>
+                </div>        
+                <span class="profit__desc">Варежки-мишки</span>
+              </p>
+            </a>
+  
+            <a href="#" class="profit__gallery profit__gallery-eight">
+              <img
+                class="profit__img"
+                src="img/profit/t-shirts.jpg"
+                alt="Две белые футболки"
+              />
+              <p class="profit__text">
+                <div class="profit__price">
+                  <span class="profit__new-price">1299 ₽</span>
+                  <span class="profit__old-price">2598 ₽</span>
+                </div>        
+                <span class="profit__desc">Пара футболок</span>
+              </p>
+            </a>
+          </div>      
+        </div>      
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__logo-block">
+          <img
+            class="footer__logo"
+            src="img/footer/logo.svg"
+            alt="Логотип магазина ShopOnline"
+          />
+        </div>
+
+        <div class="footer__catalog">
+          <h2 class="footer__title">Каталог</h2>
+          <ul class="footer__list">
+            <li class="footer__text"><a href="#">Смартфоны</a></li>
+            <li class="footer__text"><a href="#">Ноутбуки</a></li>
+            <li class="footer__text"><a href="#">Ювелирные изделия</a></li>
+            <li class="footer__text"><a href="#">Одежда</a></li>
+            <li class="footer__text"><a href="#">Бытовая техника</a></li>
+            <li class="footer__text"><a href="#">Бытовая химия</a></li>
+            <li class="footer__text"><a href="#">Книги и журналы</a></li>
+            <li class="footer__text"><a href="#">Домашний текстиль</a></li>
+            <li class="footer__text"><a href="#">Электроника</a></li>
+            <li class="footer__text"><a href="#">Косметика</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer__title">Покупателям</h2>
+          <ul>
+            <li class="footer__text"><a href="#">Оплата заказа</a></li>
+            <li class="footer__text"><a href="#">Условия доставки</a></li>
+            <li class="footer__text"><a href="#">Условия возврата заказа</a></li>
+            <li class="footer__text"><a href="/blog.html">Блог</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer__title">Контакты</h2>
+
+          <address class="footer__address">
+            <a 
+              class="footer__link"
+              href="tel:89378392361"
+              aria-label="Телефон"
+              >Тел: +7 937 839 23-61
+            </a>
+            <a 
+              class="footer__link"
+              href="mailto:OnlineShop@gmail.com"
+              aria-label="Email"
+              >Email: OnlineShop@gmail.com
+            </a>
+          </address>
+
+          <nav class="footer__nav">
+            <ul class="footer__social-list">
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank" aria-label="WhatsApp">
+                  <svg
+                    class="footer__image"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                  >
+                    <use href="./img/footer/nav.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank" aria-label="Instagram">
+                  <svg          
+                    class="footer__image"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                  >
+                    <use href="./img/footer/nav.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank" aria-label="Youtube">
+                  <svg
+                    class="footer__image"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                  >
+                    <use
+                      href="./img/footer/nav.svg#youtube"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank" aria-label="Facebook">
+                  <svg
+                    class="footer__image"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                  >
+                    <use
+                      href="./img/footer/nav.svg#facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__link" href="#" target="_blank" aria-label="Telegram">
+                  <svg
+                    class="footer__image"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                  >
+                    <use
+                      href="./img/footer/nav.svg#telegram"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+          <p class="footer__copy-text">© OnlineShop, 2021</p>
+
+          <p class="footer__by-text">Design by Anastasia Ilina Tg:&nbsp;@Mrshmallowww</p>
+    </footer>
   </body>
 </html>

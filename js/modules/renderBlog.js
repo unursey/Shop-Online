@@ -20,7 +20,7 @@ const renderGoods = async (page, pageNum) => {
   console.log(allPageNums)
 
   const goods = data.data.map((item) => {
-    const cart = document.createElement("div");
+    const cart = document.createElement("li");
     cart.className = "blog__article-cart article-cart";
     cart.innerHTML = `
             <div class="article-cart__img-block">
