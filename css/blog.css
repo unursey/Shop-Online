@@ -166,3 +166,12 @@
         align-self: center;
     }
   }
+
+  @media (max-width: 520px) {
+    .article-cart__title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+  }

@@ -27,7 +27,7 @@ const renderGoods = async (page, pageNum) => {
                 <img src="img/blog/test.jpg" class="article-cart__img" alt="Превью статьи"/>
             </div>
             <div class="article-cart__text-block">
-                <a href="article.html?id=${item.id}" class="article-cart__title">${item.title}</a>
+                <h2><a href="article.html?id=${item.id}" class="article-cart__title">${item.title}</a></h2>
                 <p class="article-cart__date">22 октября 2021, 12:45</p>
                 <div class="article-cart__reaction">
                     <a class="article-cart__views">0К</a>
