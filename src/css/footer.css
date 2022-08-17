@@ -82,7 +82,6 @@
 
   .footer__by-text {
     grid-column: 3 / 4;
-    text-align: right;
   }
 }
 
@@ -124,6 +123,7 @@
 
   .footer__by-text {
     grid-column: 1 / 2;
+    justify-self: end;
   }
 
   .footer__list {

@@ -1,0 +1,15 @@
+.crumbs {
+    display: flex;
+}
+
+.crumbs__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    color: var(--darker-than-lightgrey-color, #525252);
+}
+
+.crumbs__icon {
+    margin-right: 10px;
+    margin-left: 10px;
+}

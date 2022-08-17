@@ -102,7 +102,18 @@ export const renderArticle = async (id) => {
   article.className = "article__container";
 
   article.innerHTML = `
-    <p class="article__text article__text-header"><a href="/index.html">Главная</a> > <a href="/blog.html${backPage}">Блог</a> > ${data.data.title}</p>
+    <div class="article__crumbs crumbs">
+      <p class="crumbs__text"><a href="/index.html">Главная</a></p>
+      <svg class="crumbs__icon" width="18" height="18" viewBox="0 0 18 18" fill="#525252" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+      </svg>
+      <p class="crumbs__text"><a href="/blog.html${backPage}">Блог</a></p>
+      <svg class="crumbs__icon" width="18" height="18" viewBox="0 0 18 18" fill="#525252" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
+      </svg>
+      <p class="crumbs__text">${data.data.title}</p>
+    </div>
+
     <h1 class="page__title">${data.data.title}</h1>
     <p class="article__text">${data.data.body}</p>
 
