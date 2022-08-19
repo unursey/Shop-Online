@@ -27,11 +27,13 @@ const renderGoods = async (page, pageNum) => {
                 <img src="img/blog/test.jpg" class="article-cart__img" alt="Превью статьи"/>
             </div>
             <div class="article-cart__text-block">
-                <h2><a href="article.html?id=${item.id}" class="article-cart__title">${item.title}</a></h2>
-                <p class="article-cart__date">22 октября 2021, 12:45</p>
-                <div class="article-cart__reaction">
-                    <a class="article-cart__views">0К</a>
-                    <a class="article-cart__comments">0</a>
+                <h2 class="article-cart__title-block"><a href="article.html?id=${item.id}" class="article-cart__title">${item.title}</a></h2>
+                <div class="article-cart__info">
+                  <p class="article-cart__date">22 октября 2021, 12:45</p>
+                  <div class="article-cart__reaction">
+                      <a class="article-cart__views">0К</a>
+                      <a class="article-cart__comments">0</a>
+                  </div>
                 </div>
             </div
         `;
@@ -111,7 +113,7 @@ export const renderArticle = async (id) => {
       <svg class="crumbs__icon" width="18" height="18" viewBox="0 0 18 18" fill="#525252" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z" fill="#525252"/>
       </svg>
-      <p class="crumbs__text">${data.data.title}</p>
+      <p class="crumbs__text crumbs__text-title">${data.data.title}</p>
     </div>
 
     <h1 class="page__title">${data.data.title}</h1>

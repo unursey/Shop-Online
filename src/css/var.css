@@ -13,3 +13,27 @@
   --darker-than-lightgrey-color: #525252;
   --darkgrey-color: #2D2D2D;
 }
+
+.blog {
+  --cart-count: 2;
+  --column-gap: 140px;
+}
+
+@media (max-width: 1200px) {
+  .blog {
+    --column-gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog {
+    --cart-count: 1;
+    --column-gap: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .blog {
+    --column-gap: 10px;
+  }
+}

@@ -124,13 +124,13 @@
 @media (max-width: 1200px) {
   .header {
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
   }
 
   .header__container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 54px 54px;
-    gap: 50px;
+    gap: 34px;
   }
 
   .header__logo-block {
@@ -157,7 +157,7 @@
 
 @media (max-width: 768px) {
   .header {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 
   .header__container {
