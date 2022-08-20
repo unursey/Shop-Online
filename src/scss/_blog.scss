@@ -1,0 +1,275 @@
+.blog {
+  &__container {
+    padding-top: 19px;
+    padding-bottom: 151px;
+    @include desktop {
+      padding-top: 25px;
+      padding-bottom: 101px;
+    }
+    @include laptop {
+      padding-top: 15px;
+      padding-bottom: 83px;
+    }
+    @include tablet {
+      padding-top: 0;
+      padding-bottom: 53px;
+    }
+  }
+
+  &__article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 50px;
+    padding: 80px 0 100px 0;
+    margin: 0 auto;
+    @include desktop {
+      row-gap: 30px;
+      padding: 60px 0 80px 0;
+    }
+    @include laptop {
+      row-gap: 20px;
+      padding: 50px 0 56px 0;
+    }
+    @include tablet {
+      row-gap: 10px;
+      padding: 31px 0 46px 0;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+  }
+}
+
+.article-cart {
+  display: flex;
+//  flex-basis: calc(100% / $cart-count - ($column-gap * ($cart-count - 1)) / $cart-count);
+flex-basis: calc(100% / 2 - (140px * (2 - 1)) / 2);
+  gap: 30px;
+  @include desktop {
+    flex-basis: calc(100% / 2 - (20px * (2 - 1)) / 2);
+    gap: 20px;
+  }
+  @include laptop {
+    flex-basis: calc(100% / 1 - (20px * (1 - 1)) / 1);
+  }
+  @include tablet {
+    flex-basis: calc(100% / 1 - (10px * (1 - 1)) / 1);
+    gap: 7px;
+  }
+
+  &__img-block {
+    height: 195px;
+    width: 195px;
+    flex-shrink: 0;
+    @include desktop {
+      height: 140px;
+      width: 140px;
+    }
+    @include tablet {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: 0 20%;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    @include desktop {
+      border-radius: 16px;
+    }
+    @include tablet {
+      border-radius: 8px;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    gap: 13px;
+    @include desktop {
+      padding-top: 4px;
+      gap: 11px;
+    }
+    @include tablet {
+      font-size: 14px;
+      justify-content: space-between;
+      padding-top: 0;
+      gap: 5px;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      align-items: flex-end;
+      gap: 15px;
+    }
+  }
+
+  &__title-block {
+    margin: 0; /* Убираем внешний отступ */
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+    color: $darkgrey-color;
+    @include desktop {
+      font-size: 24px;
+      line-height: 28.8px;
+    }
+    @include laptop {
+      font-size: 22px;
+      line-height: 26.4px;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    color: $lightgrey-color;
+    @include desktop {
+      font-size: 14px;
+      line-height: 18.2px;
+    }
+    @include tablet {
+      font-size: 8px;
+      line-height: 10.4px;
+    }
+  }
+
+  &__reaction {
+    display: flex;
+    gap: 25px;
+    justify-self: flex-end;
+    @include desktop {
+      gap: 22px;
+    }
+    @include tablet {
+      gap: 7px;
+    }
+  }
+
+  &__views,
+  &__comments {
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    color: $lightgrey-color;
+    vertical-align: middle;
+    &:before {
+      content: "";
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0;
+    }
+    @include desktop {
+      padding-left: 25px;
+      font-size: 14px;
+      line-height: 18.2px;
+    }
+    @include tablet {
+      padding-left: 12px;
+      font-size: 8px;
+      line-height: 10.4px;
+    }
+  }
+
+  &__views:before {
+    width: 20px;
+    height: 14px;
+    background-image: url("/img/blog/views.svg");
+    @include tablet {
+      width: 10.41px;
+      height: 7.58px;
+    }
+  }
+
+  &__comments:before {
+    width: 20px;
+    height: 20px;
+    background-image: url("/img/blog/comments.svg");
+    @include tablet {
+      width: 10.83px;
+      height: 10.83px;
+    }
+  }
+}
+
+.pagination {
+  &__left,
+  &__right {
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+
+  &__img {
+    object-fit: contain;
+    width: 37px;
+    height: 37px;
+    outline: none;
+    &:hover,
+    &:focus {
+      fill: $blue-color;
+    }
+    &:focus {
+      outline: 1px solid $blue-color;
+    }
+  }
+
+  &__num-list {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__num {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    border: 3px solid $darkgrey-color;
+    border-radius: 5px;
+    color: $darkgrey-color;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &_active {
+      color: $blue-color;
+      border-color: $blue-color;
+    }
+  }
+}

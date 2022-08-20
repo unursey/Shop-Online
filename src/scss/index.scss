@@ -1,0 +1,16 @@
+
+@import 'normalize';
+@include normalize();
+@import 'var';
+@import "fonts";
+@import "basic";
+
+@import "header";
+@import "present";
+@import "profit";
+@import "footer";
+@import "timer";
+@import "blog";
+@import "ad";
+@import "article";
+@import "crumbs";

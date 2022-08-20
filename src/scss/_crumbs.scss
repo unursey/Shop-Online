@@ -1,0 +1,38 @@
+.crumbs {
+  display: flex;
+  &__text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    color: $darker-than-lightgrey-color;
+    @include laptop {
+      font-size: 14px;
+      line-height: 18.2px;
+    }
+    @include tablet {
+      font-size: 8px;
+      line-height: 10.4px;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+    margin-left: 10px;
+    @include tablet {
+      height: 10px;
+    }
+  }
+
+  &__text-title {
+    max-width: 460px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include desktop {
+      max-width: 260px;
+    }
+    @include laptop {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,521 @@
+.present {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 210px) repeat(4, 228px);
+    gap: 60px;
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 160px) 202px repeat(3, 194px) repeat(
+          2,
+          214px
+        );
+      column-gap: 30px;
+      row-gap: 22px;
+    }
+    @include laptop {
+      grid-template-columns: 1fr 1fr 1.4fr 1.3fr;
+      grid-template-rows: repeat(2, 138px) 130px repeat(3, 126px) repeat(
+          2,
+          157.5px
+        );
+      column-gap: 20px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows:
+        repeat(2, 160px) 120px 118px repeat(2, 93px) repeat(2, 118px)
+        repeat(2, 95px) 123px;
+      gap: 20px;
+    }
+  }
+
+  &__gallery {
+    position: relative;
+    &:after {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      width: 88px;
+      height: 88px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 88px;
+      -moz-border-radius: 44px;
+      -webkit-border-radius: 44px;
+      border-radius: 44px;
+      background-color: $yellow-color;
+      color: $white-color;
+      @include laptop {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+      }
+    }
+  }
+
+  &__timer {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    left: 0;
+    margin: 0 auto;
+    z-index: 20;
+    @include laptop {
+      bottom: 30px;
+    }
+  }
+
+  &__img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &_transform_scale {
+      transform: scale(-1, 1);
+      object-position: left top;
+    }
+  }
+
+  &__gallery-one {
+    position: relative;
+    grid-column: 1 / 7;
+    grid-row: 1 / 3;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $black-color;
+      z-index: 10;
+      opacity: 0.4;
+    }
+    @include desktop {
+      grid-column: 1 / 5;
+      grid-row: 1 / 3;
+      margin-bottom: 28px;
+    }
+    @include laptop {
+      margin-bottom: 18px;
+    }
+    @include tablet {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+      margin-bottom: 0;
+    }
+  }
+
+  &__gallery-two {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  &__gallery-three {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    &:after {
+      content: "-25%";
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      @include laptop {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  }
+
+  &__gallery-four {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    &:after {
+      content: "-40%";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      @include laptop {
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+
+  &__gallery-five {
+    grid-column: 3 / 5;
+    grid-row: 3 / 5;
+    @include tablet {
+      grid-column: 1 / 3;
+      grid-row: 5 / 7;
+    }
+  }
+
+  &__gallery-six {
+    grid-column: 5 / 7;
+    grid-row: 3 / 4;
+    @include desktop {
+      grid-column: 1 / 3;
+      grid-row: 5 / 6;
+    }
+    @include tablet {
+      grid-row: 7 / 8;
+    }
+  }
+
+  &__gallery-seven {
+    grid-column: 5 / 7;
+    grid-row: 4 / 5;
+    &:after {
+      content: "-15%";
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      @include laptop {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+    @include desktop {
+      grid-column: 1 / 3;
+      grid-row: 6 / 7;
+    }
+    @include tablet {
+      grid-row: 8 / 9;
+    }
+  }
+
+  &__gallery-eight {
+    grid-column: 1 / 5;
+    grid-row: 5 / 7;
+    @include desktop {
+      grid-row: 7 / 9;
+      margin-top: 32px;
+    }
+    @include laptop {
+      margin-top: 0;
+    }
+    @include tablet {
+      grid-column: 1 / 3;
+      grid-row: 11 / 12;
+    }
+  }
+
+  &__gallery-nine {
+    grid-column: 5 / 6;
+    grid-row: 5 / 7;
+    &:after {
+      content: "-55%";
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      @include laptop {
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+    @include desktop {
+      grid-column: 3 / 4;
+    }
+    @include tablet {
+      grid-column: 1 / 2;
+      grid-row: 9 / 11;
+    }
+  }
+
+  &__gallery-ten {
+    grid-column: 6 / 7;
+    grid-row: 5 / 6;
+    &:after {
+      content: "-25%";
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      @include laptop {
+        top: 10px;
+        left: 10px;
+      }
+    }
+    @include desktop {
+      grid-column: 4 / 5;
+    }
+    @include tablet {
+      grid-column: 2 / 3;
+      grid-row: 9 / 10;
+    }
+  }
+
+  &__gallery-eleven {
+    grid-column: 6 / 7;
+    grid-row: 6 / 7;
+    @include desktop {
+      grid-column: 4 / 5;
+    }
+    @include tablet {
+      grid-column: 2 / 3;
+      grid-row: 10 / 11;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    color: $white-color;
+  }
+
+  &__text_bold {
+    font-weight: 700;
+  }
+
+  &__text_big {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 67.2px;
+    @include desktop {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    @include laptop {
+      font-size: 26px;
+      line-height: 28.6px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 17.6px;
+    }
+  }
+
+  &__text-one {
+    top: 145px;
+    left: 112px;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 91px;
+    z-index: 20;
+    @include desktop {
+      top: 80px;
+      left: 80px;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 52px;
+    }
+    @include laptop {
+      top: 64px;
+      left: 80px;
+      font-size: 30px;
+      line-height: 39px;
+    }
+    @include tablet {
+      top: 50px;
+      left: 29px;
+      font-size: 22px;
+      line-height: 28.6px;
+    }
+  }
+
+  &__text-two {
+    width: 120px;
+    top: 80px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 39px;
+    @include desktop {
+      width: 180px;
+      top: 101px;
+      left: 13px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31.2px;
+    }
+    @include laptop {
+      width: 120px;
+      top: 43px;
+      left: 10px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+    @include tablet {
+      width: 50px;
+      top: 66px;
+      font-size: 12px;
+      line-height: 13.2px;
+    }
+  }
+
+  &__text-three {
+    top: 67px;
+    left: 14px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 39px;
+    @include desktop {
+      top: 54px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 31.2px;
+    }
+    @include laptop {
+      top: 15px;
+      left: 15px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20.8px;
+    }
+    @include tablet {
+      top: 18px;
+      left: 10px;
+      font-size: 12px;
+      line-height: 15.6px;
+    }
+  }
+
+  &__text-five {
+    top: 325px;
+    left: 20px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    padding: 24px 26px;
+    background-color: $lightblue-color;
+    border-radius: 20px;
+    @include desktop {
+      top: 245px;
+      font-size: 30px;
+    }
+    @include laptop {
+      top: 200px;
+      left: 10px;
+      right: 10px;
+      font-size: 16px;
+      line-height: 17.6px;
+      padding: 12px 20px 18px 26px;
+      border-radius: 12px;
+    }
+    @include tablet {
+      top: 160px;
+      font-size: 12px;
+      line-height: 13.2px;
+      padding: 7px 25px 11px 25px;
+    }
+  }
+
+  &__text-six {
+    width: 360px;
+    top: 94px;
+    left: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    @include desktop {
+      top: 89px;
+      font-size: 30px;
+      line-height: 39px;
+    }
+    @include laptop {
+      width: 140px;
+      top: 70px;
+      left: 21px;
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+    @include tablet {
+      width: 200px;
+      top: 88px;
+      left: 10px;
+      font-size: 12px;
+      line-height: 14.4px;
+    }
+  }
+
+  &__text-seven {
+    top: 136px;
+    left: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px;
+    @include desktop {
+      top: 119px;
+      left: 30px;
+      font-size: 30px;
+      line-height: 39px;
+    }
+    @include laptop {
+      top: 87px;
+      left: 21px;
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+    @include tablet {
+      top: 88px;
+      left: 10px;
+      font-size: 12px;
+      line-height: 14.4px;
+    }
+  }
+
+  &__text-eight {
+    text-transform: uppercase;
+    top: 368px;
+    left: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    padding: 30px 40px;
+    color: $red-color;
+    background-color: $white-color;
+    border-radius: 20px;
+    @include desktop {
+      top: 300px;
+      left: 30px;
+      font-size: 30px;
+      line-height: 36px;
+      padding: 24px 46px;
+    }
+    @include laptop {
+      top: 243px;
+      left: 26px;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 22px 34px;
+      border-radius: 12px;
+    }
+    @include tablet {
+      top: 83px;
+      left: 15px;
+      font-size: 12px;
+      line-height: 14.4px;
+      padding: 7px 41px;
+    }
+  }
+
+  &__text-ten {
+    top: 130px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    @include desktop {
+      top: 150px;
+      left: 10px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+    @include laptop {
+      top: 94px;
+      left: 15px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+    @include tablet {
+      top: 70px;
+      left: 9px;
+      font-size: 12px;
+      line-height: 14.4px;
+    }
+  }
+}

@@ -1,0 +1,257 @@
+.page__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding-top: 19px;
+  padding-bottom: 150px;
+  @include desktop {
+    gap: 20px;
+    padding-top: 25px;
+    padding-bottom: 100px;
+  }
+  @include laptop {
+    flex-direction: column;
+    gap: 60px;
+    padding-top: 15px;
+    padding-bottom: 80px;
+  }
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 52px;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 65px;
+    color: $brown-color;
+    margin-bottom: 40px;
+    @include desktop {
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 30px;
+    }
+    @include laptop {
+      font-size: 28px;
+      line-height: 36.4px;
+      margin-bottom: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+      line-height: 23.4px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.article {
+  flex-basis: 1095px;
+  @include desktop {
+      flex-basis: 620px;
+  }
+  @include laptop {
+    flex-basis: 100%;
+  }
+  &__crumbs {
+    margin-bottom: 80px;
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include laptop {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    margin-bottom: 100px;
+    margin-top: 0;
+    @include desktop {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 60px;
+    }   
+    @include laptop  {
+      font-size: 16px;
+      line-height: 20.8px;
+      margin-bottom: 35px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 15.6px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link-block {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    @include desktop {
+      margin-right: 0;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__link-back {
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    padding-left: 34px;
+    align-self: center;
+    @include desktop {
+      font-size: 14px;
+      line-height: 18.2px;
+      padding-left: 26px;
+      align-self: flex-end;
+    }
+    @include laptop  {
+      font-size: 14px;
+      line-height: 18.2px;
+      padding-left: 23px;
+    }
+    @include tablet {
+      font-size: 10px;
+      line-height: 13px;
+      padding-left: 20px;
+      align-self: flex-start;
+      order: 2;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 12px;
+      left: 0;
+      top: 2px;
+      background-image: url("/img/article/keyboard_backspace.svg");
+      background-size: contain;
+      @include tablet {
+        width: 12px;
+        height: 8px;
+      }
+    }
+    &:hover {
+      color: $blue-color;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link-author {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;
+    color: $black-color;
+    margin-bottom: 20px;
+    align-self: flex-end;
+    @include desktop {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    color: $lightgrey-color;
+    margin-bottom: 15px;
+    @include desktop {
+      font-size: 14px;
+      line-height: 18.2px;
+      margin-bottom: 17px;
+    }
+    @include tablet {
+      font-size: 8px;
+      line-height: 10.4px;
+      margin-bottom: 12px;
+      align-self: flex-end;
+    }
+  }
+
+  &__reaction {
+    display: flex;
+    gap: 37px;
+    @include desktop {
+      gap: 22px;
+    }
+    @include tablet {
+      gap: 7px;
+      margin-bottom: 23px;
+      margin-right: 40px;
+      align-self: flex-end;
+    } 
+  }
+
+  &__views,
+  &__comments {
+    display: flex;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    color: $lightgrey-color;
+    padding-left: 30px;
+    vertical-align: middle;
+    align-items: center;
+    @include desktop {    
+      font-size: 14px;
+      line-height: 18.2px;
+      padding-left: 25px;
+    }
+    @include tablet { 
+      font-size: 8px;
+      line-height: 10.8px;
+      padding-left: 12px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0;
+    }
+  }
+
+  &__views:before {
+    width: 20px;
+    height: 14px;
+    background-image: url("/img/blog/views.svg");
+    @include tablet {
+      width: 10.41px;
+      height: 7.58px;
+      bottom: 2.5px;
+    }
+  }
+
+  &__comments:before {
+    width: 20px;
+    height: 20px;
+    background-image: url("/img/blog/comments.svg");
+    @include tablet {
+      width: 10.83px;
+      height: 10.83px;
+    }
+  }
+}
+
+

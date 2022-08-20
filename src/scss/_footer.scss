@@ -1,0 +1,239 @@
+.footer {
+  background-color: $darkgrey-color;
+  color: $white-color;
+  padding: 80px 0;
+  @include desktop {
+    padding: 80px 0 44px 0;
+  }
+  @include laptop {
+    padding: 40px 0 37px 0;
+  }
+  @include tablet {
+    padding: 30px 0 20px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, auto);
+    gap: 50px 50px;
+    @media (max-width: 1500px) {
+        grid-template-columns: repeat(3, auto);
+    }
+    @include desktop {
+      gap: 60px 50px
+    }
+    @include laptop {
+      gap: 40px 40px
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, auto);
+      gap: 20px;
+    }
+  }
+
+  &__logo-block {
+    @media (max-width: 1500px) {
+      grid-column: 1 / 4;
+    }
+    @include desktop {
+      grid-column: 1 / 3;
+    }  
+    @include tablet {
+    margin-bottom: 7px;
+  }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+    margin-bottom: 40px;
+    @include desktop {
+      margin-bottom: 30px;
+    }
+    @include laptop {
+      font-size: 26px;
+      line-height: 33.8px;
+      margin-bottom: 20px;
+    }
+    @include tablet {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    margin-bottom: 15px;
+    @include laptop {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 14.4px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__list_column_two {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    @include desktop {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    text-decoration: none;
+    gap: 21px;
+    margin-bottom: 37px;
+    @include laptop {  
+      font-size: 12px;
+      line-height: 15.6px;
+      gap: 13px;
+      margin-bottom: 32px;
+    }
+    @include tablet {  
+      font-size: 10px;
+      line-height: 13px;
+      gap: 9px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 24px;
+    @include laptop {
+      gap: 18.5px;
+    }
+    @include tablet {
+      margin-bottom: 41px;
+    }
+  }
+
+  &__image {
+    width: 22.75px;
+    height: 22.75px;
+  }
+
+  &__copy-text {
+    grid-column: 1 / 2;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    @include laptop {
+      font-size: 12px;
+      line-height: 15.6px;
+    }
+    @include tablet {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+
+  &__by-text {
+    grid-column: 4 / 5;
+    max-width: 200px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    @media (max-width: 1500px) {
+      grid-column: 3 / 4;
+    }
+    @include desktop {
+      grid-column: 3 / 4;
+      justify-self: end;
+    }
+    @include laptop {
+      font-size: 12px;
+      line-height: 22px;
+      grid-column: 3 / 4;
+      justify-self: start;
+    }
+    @include tablet {
+      grid-column: 2 / 3;
+      font-size: 10px;
+      line-height: 16px;
+      justify-self: end;
+    }
+  }
+
+  &__catalog {
+    @include desktop {
+    grid-column: 1 / 2;
+    }
+    @include tablet {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__buye {
+    @include tablet {
+    margin-bottom: 10px;
+    grid-column: 1 / 3;
+    }
+  }
+
+  &__contact {
+    @include tablet {
+    grid-column: 1 / 3;
+    }
+  }
+
+  &__title-acc {
+    @include tablet {
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 8px;
+      top: 10px; 
+      margin-left: 12px;
+      background-image: url("../img/footer/polygon.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    }
+  }
+
+  &__block-list {
+    @include tablet {
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out; 
+    }
+  }
+
+  &__acc_active &__block-list {
+    @include tablet {
+    height: auto;
+    }
+  }
+
+  &__acc_active &__title-acc:after {
+    @include tablet {
+    transform: rotate(180deg);
+    }
+  }
+}
