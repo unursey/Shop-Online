@@ -124,6 +124,7 @@
     gap: 24px;
     @include laptop {
       gap: 18.5px;
+      flex-wrap: wrap;
     }
     @include tablet {
       margin-bottom: 41px;
