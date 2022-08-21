@@ -1828,6 +1828,7 @@ svg path {
 @media (max-width: 768px) {
   .footer__social-list {
     gap: 18.5px;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 520px) {
