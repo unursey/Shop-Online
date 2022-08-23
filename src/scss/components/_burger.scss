@@ -1,0 +1,199 @@
+.burger {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  left: 0;
+  visibility: hidden;
+  color: $darkgrey-color;
+  background-color: rgba(27, 26, 27, 0.7);
+  transition: 0.3s ease-in-out;
+  z-index: 100;
+  
+  @include desktop {
+    top: 200px;
+  }
+  @include laptop {
+    top: 180px;
+  }
+  @include tablet {
+    top: 190px;
+  }
+
+  &_visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &_visible &__menu {
+    opacity: 1;
+  }
+
+  &__menu {
+    background-color: $white-color;
+    opacity: 1;
+    padding: 52px 0 90px 0;
+    z-index: 110;
+    @include desktop {
+    padding: 45px 0 44px 0;
+    }
+    @include laptop {
+        padding: 40px 0 37px 0;
+    }
+    @include tablet {
+        padding: 30px 0 20px 0;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, auto);
+    background-color: $white-color;
+    gap: 50px 50px;
+    @include desktop {
+      gap: 60px 50px;
+    }
+    @include laptop {
+      gap: 40px 40px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, auto);
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+    margin-bottom: 40px;
+    @include desktop {
+      margin-bottom: 30px;
+    }
+    @include laptop {
+      font-size: 26px;
+      line-height: 33.8px;
+      margin-bottom: 20px;
+    }
+    @include tablet {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    margin-bottom: 15px;
+    @include laptop {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 14.4px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__list_column_two {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    @include desktop {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    text-decoration: none;
+    gap: 21px;
+    margin-bottom: 37px;
+    @include laptop {
+      font-size: 12px;
+      line-height: 15.6px;
+      gap: 13px;
+      margin-bottom: 32px;
+    }
+    @include tablet {
+      font-size: 10px;
+      line-height: 13px;
+      gap: 9px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__catalog {
+    @include desktop {
+      grid-column: 1 / 2;
+    }
+    @include tablet {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__buye {
+    @include tablet {
+      margin-bottom: 10px;
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__contact {
+    @include tablet {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__title_icon {
+    @include tablet {
+      position: relative;
+      cursor: pointer;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 17px;
+        height: 8px;
+        top: 10px;
+        margin-left: 12px;
+        background-image: url("../img/burger/polygon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__block-list {
+    @include tablet {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.4s ease-in-out;
+    }
+  }
+}
+.collapse_active .burger__block-list {
+  @include tablet {
+    height: auto;
+  }
+}
+
+.collapse_active .burger__title_icon:after {
+  @include tablet {
+    transform: rotate(180deg);
+  }
+}

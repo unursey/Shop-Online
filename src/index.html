@@ -7,26 +7,37 @@
 
     <link
       rel="preload"
-      href="fonts/lato-regular.woff2"
+      href="fonts/lato-400.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="fonts/lato-bold.woff2"
+      href="fonts/lato-700.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
 
-    <title>Modul07 Lesson01</title>
-    <script type="module" src="./js/script.js"></script>
+    <title>Modul07 Lesson04</title>
 
-    <link rel="stylesheet" href="css/index.css" />
+    <!-- <link rel="stylesheet" href="css/index.css" /> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const createLink = url => {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = url;
+          document.head.append(link);
+        }
+        createLink('css/index.css')
+      })
+    </script>
+    <script src="js/index.min.js" defer></script>
   </head>
 
-  <body>
+  <body class="page">
     <header class="header">
       <div class="container header__container">
         <div class="header__logo-block">
@@ -34,10 +45,12 @@
             class="header__logo"
             src="img/header/logo.svg"
             alt="Логотип магазина ShopOnline"
+            width="190"
+            height="41"
           />
         </div>
 
-        <button class="header__button-nav" aria-haspopup="menu" aria-label="Открыть меню">Меню</button>
+        <button class="header__button-nav header__button-nav_icon-open" aria-haspopup="menu" aria-label="Открыть меню">Меню</button>
 
         <form class="header__form-search form-search">
           <label>
@@ -127,6 +140,51 @@
           </ul>
         </nav>
       </div>
+
+      <div class="burger">
+        <div class="burger__menu">
+        <div class="container burger__container">
+          <div class="burger__catalog collapse">
+            <h2 class="burger__title burger__title_icon collapse__title">Каталог</h2>
+            <div class="burger__block-list collapse__block">
+              <ul class="burger__list burger__list_column_two">
+                <li class="burger__text"><a href="#">Смартфоны</a></li>
+                <li class="burger__text"><a href="#">Ноутбуки</a></li>
+                <li class="burger__text"><a href="#">Ювелирные изделия</a></li>
+                <li class="burger__text"><a href="#">Одежда</a></li>
+                <li class="burger__text"><a href="#">Бытовая техника</a></li>
+                <li class="burger__text"><a href="#">Бытовая химия</a></li>
+                <li class="burger__text"><a href="#">Книги и журналы</a></li>
+                <li class="burger__text"><a href="#">Домашний текстиль</a></li>
+                <li class="burger__text"><a href="#">Электроника</a></li>
+                <li class="burger__text"><a href="#">Косметика</a></li>
+              </ul>
+            </div>           
+          </div>
+  
+          <div class="burger__buyer collapse">
+            <h2 class="burger__title burger__title_icon collapse__title">Покупателям</h2>
+            <div class="burger__block-list collapse__block">
+              <ul class="burger__list">
+                <li class="burger__text"><a href="#">Оплата заказа</a></li>
+                <li class="burger__text"><a href="#">Условия доставки</a></li>
+                <li class="burger__text"><a href="#">Условия возврата заказа</a></li>
+                <li class="burger__text"><a href="/blog.html">Блог</a></li>
+            </ul>
+            </div>
+          </div>
+  
+          <div class="burger__contact">
+            <h2 class="burger__title">Связаться с нами</h2>   
+            <a 
+              class="burger__text"
+              href="#"
+              >Контакты
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
     </header>
 
     <main>
@@ -136,11 +194,17 @@
         <ul class="container present__container">
           <li class="present__gallery present__gallery-one">
             <a href="#">
-              <img
-                class="present__img"
-                src="img/present/timer.jpg"
-                alt="Ноутбуки"
-              />
+              <picture>
+                <source srcset="img/present/timer.avif" type="image/avif">
+                <source srcset="img/present/timer.webp" type="image/webp">
+                <img
+                  class="present__img"
+                  src="img/present/timer.jpg"
+                  alt="Ноутбуки"
+                  width="1770"
+                  height="480"
+                />
+              </picture>
               <p class="present__text present__text-one">
                 -50% на все ноутбуки
               </p>
@@ -150,7 +214,11 @@
 
           <li class="present__gallery present__gallery-two">
             <a href="#">
-              <img class="present__img" src="img/present/1.jpg" alt="Книга" />
+              <picture>
+                <source srcset="img/present/1.avif" type="image/avif">
+                <source srcset="img/present/1.webp" type="image/webp">
+                <img class="present__img" src="img/present/1.jpg" alt="Книга" width="245" height="228"/>
+              </picture>
               <p class="present__text present__text-two">
                 <span class="present__text_bold">Книга –</span> лучший подарок
               </p>
@@ -159,11 +227,17 @@
 
           <li href="#" class="present__gallery present__gallery-three">
             <a href="#">
-              <img
-                class="present__img"
-                src="img/present/2.jpg"
-                alt="Время скидок"
-              />
+              <picture>
+                <source srcset="img/present/2.avif" type="image/avif">
+                <source srcset="img/present/2.webp" type="image/webp">
+                <img
+                  class="present__img"
+                  src="img/present/2.jpg"
+                  alt="Время скидок"
+                  width="245"
+                  height="228"
+                />
+              </picture>
               <p class="present__text present__text-three">
                 Время скидок!
               </p>
@@ -172,13 +246,21 @@
 
           <li href="#" class="present__gallery present__gallery-four">
             <a href="#">
-              <img class="present__img" src="img/present/3.jpg" alt="Обувь" />
+              <picture>
+                <source srcset="img/present/3.avif" type="image/avif">
+                <source srcset="img/present/3.webp" type="image/webp">
+                <img class="present__img" src="img/present/3.jpg" alt="Обувь" width="550" height="228"/>
+              </picture>
             </a>
           </li>
 
           <li href="#" class="present__gallery present__gallery-five">
             <a href="#">
-              <img class="present__img" src="img/present/4.jpg" alt="Кроссовки" />
+              <picture>
+                <source srcset="img/present/4.avif" type="image/avif">
+                <source srcset="img/present/4.webp" type="image/webp">
+                <img class="present__img" src="img/present/4.jpg" alt="Кроссовки" width="550" height="516"/>
+              </picture>
               <p class="present__text present__text-five">
                 Вторая пара кроссовок
                 <span class="present__text_big">в&nbspподарок!</span>
@@ -188,7 +270,11 @@
 
           <li href="#" class="present__gallery present__gallery-six">
             <a href="#">
-              <img class="present__img" src="img/present/5.jpg" alt="Подарки" />
+              <picture>
+                <source srcset="img/present/5.avif" type="image/avif">
+                <source srcset="img/present/5.webp" type="image/webp">
+                <img class="present__img" src="img/present/5.jpg" alt="Подарки" width="550" height="228"/>
+              </picture>
               <p class="present__text present__text-six">
                 Идеи новогодних подарков
               </p>
@@ -197,7 +283,11 @@
 
           <li href="#" class="present__gallery present__gallery-seven">
             <a href="#">
-              <img class="present__img" src="img/present/6.jpg" alt="Техника" />
+              <picture>
+                <source srcset="img/present/6.avif" type="image/avif">
+                <source srcset="img/present/6.webp" type="image/webp">
+                <img class="present__img" src="img/present/6.jpg" alt="Техника" width="550" height="228"/>
+              </picture>
               <p class="present__text present__text-seven">
                 Выгодно в декабре!
               </p>
@@ -206,11 +296,17 @@
 
           <li href="#" class="present__gallery present__gallery-eight">
             <a href="#">
-              <img
-                class="present__img"
-                src="img/present/7.jpg"
-                alt="Украшения на Новый год"
-              />
+              <picture>
+                <source srcset="img/present/7.avif" type="image/avif">
+                <source srcset="img/present/7.webp" type="image/webp">
+                <img
+                  class="present__img"
+                  src="img/present/7.jpg"
+                  alt="Украшения на Новый год"
+                  width="1160"
+                  height="516"
+                />
+              </picture>
               <p class="present__text present__text-eight">
                 Новогодние украшения
               </p>
@@ -219,17 +315,27 @@
 
           <li href="#" class="present__gallery present__gallery-nine">
             <a href="#">
-              <img class="present__img" src="img/present/8.jpg" alt="Одежда" />
+              <picture>
+                <source srcset="img/present/8.avif" type="image/avif">
+                <source srcset="img/present/8.webp" type="image/webp">
+                <img class="present__img" src="img/present/8.jpg" alt="Одежда" width="245" height="516"/>
+              </picture>
             </a>
           </li>
 
           <li href="#" class="present__gallery present__gallery-ten">
             <a href="#">
-              <img
-                class="present__img"
-                src="img/present/9.jpg"
-                alt="Бытовая химия"
-              />
+              <picture>
+                <source srcset="img/present/9.avif" type="image/avif">
+                <source srcset="img/present/9.webp" type="image/webp">
+                <img
+                  class="present__img"
+                  src="img/present/9.jpg"
+                  alt="Бытовая химия"
+                  width="245"
+                  height="228"
+                />
+              </picture>
               <p class="present__text present__text-ten">
                 На бытовую химию
               </p>
@@ -238,11 +344,17 @@
 
           <li href="#"  class="present__gallery present__gallery-eleven">
             <a href="#">
-              <img
-                class="present__img present__img_transform_scale"
-                src="img/present/10.jpg"
-                alt="Елочные украшения"
-              />
+              <picture>
+                <source srcset="img/present/10.avif" type="image/avif">
+                <source srcset="img/present/10.webp" type="image/webp">
+                <img
+                  class="present__img present__img_transform_scale"
+                  src="img/present/10.jpg"
+                  alt="Елочные украшения"
+                  width="245"
+                  height="228"
+                />
+              </picture>
             </li>
           </a>
         </ul>
@@ -255,11 +367,17 @@
           <ul class="profit__wrapper">
             <li class="profit__gallery profit__gallery-one">
               <a href="#">
-                <img
-                class="profit__img"
-                src="img/profit/t-shirts.jpg"
-                alt="Две белые футболки"
-                />
+                <picture>
+                  <source srcset="img/profit/t-shirts.avif" type="image/avif">
+                  <source srcset="img/profit/t-shirts.webp" type="image/webp">
+                  <img
+                  class="profit__img"
+                  src="img/profit/t-shirts.jpg"
+                  alt="Две белые футболки"
+                  width="420"
+                  height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">1299 ₽</span>
@@ -272,11 +390,17 @@
   
             <li class="profit__gallery profit__gallery-two">
               <a href="#">
-                <img
-                  class="profit__img"
-                  src="img/profit/shoes.jpg"
-                  alt="Кроссовки найк белые с оранжевыми вставками"
-                />
+                <picture>
+                  <source srcset="img/profit/shoes.avif" type="image/avif">
+                  <source srcset="img/profit/shoes.webp" type="image/webp">
+                  <img
+                    class="profit__img"
+                    src="img/profit/shoes.jpg"
+                    alt="Кроссовки найк белые с оранжевыми вставками"
+                    width="420"
+                    height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">2099 ₽</span>
@@ -289,11 +413,17 @@
     
             <li class="profit__gallery profit__gallery-three">
               <a href="#">
-                <img
-                  class="profit__img"
-                  src="img/profit/bedSheets.jpg"
-                  alt="Комплект двуспального белья"
-                />
+                <picture>
+                  <source srcset="img/profit/bedSheets.avif" type="image/avif">
+                  <source srcset="img/profit/bedSheets.webp" type="image/webp">
+                  <img
+                    class="profit__img"
+                    src="img/profit/bedSheets.jpg"
+                    alt="Комплект двуспального белья"
+                    width="420"
+                    height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">3902 ₽</span>
@@ -306,11 +436,17 @@
     
             <li class="profit__gallery profit__gallery-four">
               <a href="#">
-                <img
-                  class="profit__img"
-                  src="img/profit/hairdryer.jpg"
-                  alt="Белый проводной фен"
-                />
+                <picture>
+                  <source srcset="img/profit/hairdryer.avif" type="image/avif">
+                  <source srcset="img/profit/hairdryer.webp" type="image/webp">
+                  <img
+                    class="profit__img"
+                    src="img/profit/hairdryer.jpg"
+                    alt="Белый проводной фен"
+                    width="420"
+                    height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">2999 ₽</span>
@@ -323,11 +459,17 @@
     
             <li class="profit__gallery profit__gallery-five">
               <a href="#">
-                <img
-                  class="profit__img"
-                  src="img/profit/bedSheets.jpg"
-                  alt="Комплект двуспального белья"
-                />
+                <picture>
+                  <source srcset="img/profit/bedSheets.avif" type="image/avif">
+                  <source srcset="img/profit/bedSheets.webp" type="image/webp">
+                  <img
+                    class="profit__img"
+                    src="img/profit/bedSheets.jpg"
+                    alt="Комплект двуспального белья"
+                    width="420"
+                    height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">3902 ₽</span>
@@ -340,11 +482,17 @@
     
             <li class="profit__gallery profit__gallery-six">
               <a href="#">
-                <img
-                  class="profit__img"
-                  src="img/profit/hairdryer.jpg"
-                  alt="Белый проводной фен"
-                />
+                <picture>
+                  <source srcset="img/profit/hairdryer.avif" type="image/avif">
+                  <source srcset="img/profit/hairdryer.webp" type="image/webp">
+                  <img
+                    class="profit__img"
+                    src="img/profit/hairdryer.jpg"
+                    alt="Белый проводной фен"
+                    width="420"
+                    height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">2999 ₽</span>
@@ -357,11 +505,17 @@
     
             <li class="profit__gallery profit__gallery-seven">
               <a href="#">
-                <img
-                  class="profit__img"
-                  src="img/profit/mittens.jpg"
-                  alt="Коричневые варежки в виде мишек"
-                />
+                <picture>
+                  <source srcset="img/profit/mittens.avif" type="image/avif">
+                  <source srcset="img/profit/mittens.webp" type="image/webp">
+                  <img
+                    class="profit__img"
+                    src="img/profit/mittens.jpg"
+                    alt="Коричневые варежки в виде мишек"
+                    width="420"
+                    height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">540 ₽</span>
@@ -374,11 +528,17 @@
     
             <li class="profit__gallery profit__gallery-eight">
               <a href="#">
-                <img
-                  class="profit__img"
-                  src="img/profit/t-shirts.jpg"
-                  alt="Две белые футболки"
-                />
+                <picture>
+                  <source srcset="img/profit/t-shirts.avif" type="image/avif">
+                  <source srcset="img/profit/t-shirts.webp" type="image/webp">
+                  <img
+                    class="profit__img"
+                    src="img/profit/t-shirts.jpg"
+                    alt="Две белые футболки"
+                    width="420"
+                    height="295"
+                  />
+                </picture>
                 <p class="profit__text">
                   <div class="profit__price">
                     <span class="profit__new-price">1299 ₽</span>
@@ -400,12 +560,14 @@
             class="footer__logo"
             src="img/footer/logo.svg"
             alt="Логотип магазина ShopOnline"
+            width="190"
+            height="41"
           />
         </div>
 
-        <div class="footer__catalog footer__acc">
-          <h2 class="footer__title footer__title-acc">Каталог</h2>
-          <div class="footer__block-list">
+        <div class="footer__catalog collapse">
+          <h2 class="footer__title footer__title_icon collapse__title">Каталог</h2>
+          <div class="footer__block-list collapse__block">
             <ul class="footer__list footer__list_column_two">
               <li class="footer__text"><a href="#">Смартфоны</a></li>
               <li class="footer__text"><a href="#">Ноутбуки</a></li>
@@ -421,9 +583,9 @@
           </div>           
         </div>
 
-        <div class="footer__buyer footer__acc">
-          <h2 class="footer__title footer__title-acc">Покупателям</h2>
-          <div class="footer__block-list">
+        <div class="footer__buyer collapse">
+          <h2 class="footer__title footer__title_icon collapse__title">Покупателям</h2>
+          <div class="footer__block-list collapse__block">
             <ul class="footer__list">
               <li class="footer__text"><a href="#">Оплата заказа</a></li>
               <li class="footer__text"><a href="#">Условия доставки</a></li>

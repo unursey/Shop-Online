@@ -17,7 +17,7 @@ const renderGoods = async (page, pageNum) => {
   blogArticle.className = "blog__article";
 
   const allPageNums = data.meta.pagination.pages;
-  console.log(allPageNums)
+  console.log(allPageNums);
 
   const goods = data.data.map((item) => {
     const cart = document.createElement("li");

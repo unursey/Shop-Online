@@ -1,16 +1,17 @@
 
-@import 'normalize';
+@import 'components/normalize';
 @include normalize();
-@import 'var';
-@import "fonts";
-@import "basic";
+@import 'components/var';
+@import "components/fonts";
+@import "components/basic";
 
-@import "header";
-@import "present";
-@import "profit";
-@import "footer";
-@import "timer";
-@import "blog";
-@import "ad";
-@import "article";
-@import "crumbs";
+@import "components/header";
+@import "components/present";
+@import "components/profit";
+@import "components/footer";
+@import "components/timer";
+@import "components/blog";
+@import "components/ad";
+@import "components/article";
+@import "components/crumbs";
+@import "components/burger";

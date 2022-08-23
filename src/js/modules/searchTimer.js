@@ -9,7 +9,7 @@ export const searchTimer = () => {
         createTimer(item);
         const deadline = item.dataset.timerDeadline;
         timer(deadline, item);
-    })
+    });
 
 // const eacher = (arr, callback) => {
 

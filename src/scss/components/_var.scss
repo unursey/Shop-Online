@@ -56,8 +56,8 @@
     weight: $weight;
     display: swap;
   }
-  src: url("..fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
-    url("..fonts/#{ $name }-#{ $weight }.woff") format("woff"),
+  src: url("../fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
+    url("../fonts/#{ $name }-#{ $weight }.woff") format("woff"),
 }
 
 @mixin bg-full ($url) {

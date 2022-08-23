@@ -10,8 +10,9 @@
   <link rel="preload" href="fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
 
   <title>Modul02 Lesson10</title>
-  <script type="module" src="./js/script.js"></script>
+  
   <link rel="stylesheet" href="css/index.css"/>
+  <script src="js/index.min.js" defer></script>
 </head>
 
 
@@ -23,10 +24,12 @@
           class="header__logo"
           src="img/header/logo.svg"
           alt="Логотип магазина ShopOnline"
+          width="190"
+          height="41"
         />
       </div>
 
-      <button class="header__button-nav" aria-haspopup="menu" aria-label="Открыть меню">Меню</button>
+      <button class="header__button-nav header__button-nav_icon-open" aria-haspopup="menu" aria-label="Открыть меню">Меню</button>
 
       <form class="header__form-search form-search">
         <label>
@@ -116,7 +119,53 @@
         </ul>
       </nav>
     </div>
+
+    <div class="burger">
+      <div class="burger__menu">
+      <div class="container burger__container">
+        <div class="burger__catalog collapse">
+          <h2 class="burger__title burger__title_icon collapse__title">Каталог</h2>
+          <div class="burger__block-list collapse__block">
+            <ul class="burger__list burger__list_column_two">
+              <li class="burger__text"><a href="#">Смартфоны</a></li>
+              <li class="burger__text"><a href="#">Ноутбуки</a></li>
+              <li class="burger__text"><a href="#">Ювелирные изделия</a></li>
+              <li class="burger__text"><a href="#">Одежда</a></li>
+              <li class="burger__text"><a href="#">Бытовая техника</a></li>
+              <li class="burger__text"><a href="#">Бытовая химия</a></li>
+              <li class="burger__text"><a href="#">Книги и журналы</a></li>
+              <li class="burger__text"><a href="#">Домашний текстиль</a></li>
+              <li class="burger__text"><a href="#">Электроника</a></li>
+              <li class="burger__text"><a href="#">Косметика</a></li>
+            </ul>
+          </div>           
+        </div>
+
+        <div class="burger__buyer collapse">
+          <h2 class="burger__title burger__title_icon collapse__title">Покупателям</h2>
+          <div class="burger__block-list collapse__block">
+            <ul class="burger__list">
+              <li class="burger__text"><a href="#">Оплата заказа</a></li>
+              <li class="burger__text"><a href="#">Условия доставки</a></li>
+              <li class="burger__text"><a href="#">Условия возврата заказа</a></li>
+              <li class="burger__text"><a href="/blog.html">Блог</a></li>
+          </ul>
+          </div>
+        </div>
+
+        <div class="burger__contact">
+          <h2 class="burger__title">Связаться с нами</h2>   
+          <a 
+            class="burger__text"
+            href="#"
+            >Контакты
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
   </header>
+
 
   <main>
   <div class="container page__container">
@@ -169,12 +218,14 @@
         class="footer__logo"
         src="img/footer/logo.svg"
         alt="Логотип магазина ShopOnline"
+        width="190"
+        height="41"
       />
     </div>
 
-    <div class="footer__catalog footer__acc">
-      <h2 class="footer__title footer__title-acc">Каталог</h2>
-      <div class="footer__block-list">
+    <div class="footer__catalog collapse">
+      <h2 class="footer__title footer__title_icon collapse__title">Каталог</h2>
+      <div class="footer__block-list collapse__block">
         <ul class="footer__list footer__list_column_two">
           <li class="footer__text"><a href="#">Смартфоны</a></li>
           <li class="footer__text"><a href="#">Ноутбуки</a></li>
@@ -190,9 +241,9 @@
       </div>           
     </div>
 
-    <div class="footer__buyer footer__acc">
-      <h2 class="footer__title footer__title-acc">Покупателям</h2>
-      <div class="footer__block-list">
+    <div class="footer__buyer collapse">
+      <h2 class="footer__title footer__title_icon collapse__title">Покупателям</h2>
+      <div class="footer__block-list collapse__block">
         <ul class="footer__list">
           <li class="footer__text"><a href="#">Оплата заказа</a></li>
           <li class="footer__text"><a href="#">Условия доставки</a></li>
