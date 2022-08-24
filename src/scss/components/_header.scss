@@ -47,6 +47,17 @@
     }
   }
 
+  &__logo {
+    align-self: center;
+    height: 41px;
+    @include laptop {
+      height: 35px;
+    }    
+    @include tablet {
+      height: 25px;
+    }
+  }
+
   &__button-nav {
     grid-column: 2 / 3;
     position: relative;
