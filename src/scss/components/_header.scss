@@ -35,25 +35,21 @@
   &__logo-block {
     grid-column: 1 / 2;
     display: flex;
-    width: 190px;
     @include desktop {
       grid-row: 1 / 2;
-    }
-    @include laptop {
-      width: 165px;
-    }
-    @include tablet {
-      width: 114px;
     }
   }
 
   &__logo {
     align-self: center;
+    width: 190px;
     height: 41px;
     @include laptop {
+      width: 165px;
       height: 35px;
     }    
     @include tablet {
+      width: 114px;
       height: 25px;
     }
   }
@@ -169,6 +165,7 @@
   .form-search__button {
     position: absolute;
     right: 0;
+    top: 0;
     width: 101px;
     height: 100%;
     border: none;
