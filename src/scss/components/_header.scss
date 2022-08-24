@@ -47,6 +47,10 @@
     }
   }
 
+  &__logo {
+    object-fit: contain;
+  }
+
   &__button-nav {
     grid-column: 2 / 3;
     position: relative;
