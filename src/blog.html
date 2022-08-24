@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="" />
 
-    <link
+    <!-- <link
       rel="preload"
       href="fonts/lato-400.woff2"
       as="font"
@@ -18,15 +18,27 @@
       as="font"
       type="font/woff2"
       crossorigin
-    />
+    /> -->
 
     <title>Modul06 Lesson05</title>
 
-    <link rel="stylesheet" href="css/index.css" />
+    <!-- <link rel="stylesheet" href="css/index.css" /> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const createLink = url => {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = url;
+          document.head.append(link);
+        }
+        createLink('css/index.css')
+      })
+    </script>
+
     <script src="js/index.min.js" defer></script>
   </head>
 
-  <body>
+  <body class="page">
     <header class="header">
       <div class="container header__container">
         <div class="header__logo-block">

@@ -20,8 +20,6 @@ const startAnimation = (duration, callback) => {
     });
   };
   
-  
-  
   export const closeAnimationBurger = (burgerMenu) => {
     const duration = 1000;
     startAnimation(duration, (progress) => {

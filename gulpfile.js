@@ -75,14 +75,18 @@ export const style = () => {
 };
 
 const configWebpack = {
-  optimization: {
-      minimize: false,
+  mode: dev ? 'development' : 'production',
+    devtool: dev ? 'eval-source-map' : false,
+    optimization: {
+        minimize: false,
   },
   output: {
       filename: 'script.js'
   },
   module: {
-      rules: []
+      rules: [{
+        test: /\.(js)$/,
+        exclude: /(node_modules)/}]
   },
 };
 

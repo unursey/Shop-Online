@@ -17,6 +17,8 @@ const closeBurger = () => {
 
 export const addOpenBurger = () => {
   btnBurger.addEventListener("click", () => {
+    console.log('burgerMenu: ', burgerMenu);
+
     if (!burger.classList.contains("burger_visible")) {
       openAnimationBurger(burgerMenu, burger);
     }
