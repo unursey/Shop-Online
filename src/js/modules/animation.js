@@ -10,6 +10,9 @@ const startAnimation = (duration, callback) => {
         requestAnimationFrame(step);
       }
     });
+
+
+
   };
   
   export const openAnimationBurger = (burgerMenu, burger) => {

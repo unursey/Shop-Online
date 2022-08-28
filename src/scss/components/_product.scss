@@ -1,0 +1,383 @@
+.product {
+  position: relative;
+  padding-top: 19px;
+  @include desktop {
+    padding-top: 25px;
+  }
+  @include laptop {
+    padding-top: 15px;
+  }
+  @include tablet {
+    padding-top: 0;
+  }
+
+  &__crumbs {
+    margin-bottom: 80px;
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include laptop {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 65px;
+    margin-bottom: 25px;
+    @include desktop {
+      max-width: 620px;
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 20px;
+    }
+    @include laptop {
+      max-width: 540px;
+      font-size: 28px;
+      line-height: 36.4px;
+      margin-bottom: 10px;
+    }
+    @include tablet {
+      font-size: 18px;
+      line-height: 23.4px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 43px;
+    margin-bottom: 80px;
+    border-top: 1px solid $linegrey-color;
+    @include desktop {
+      padding-top: 50px;
+      margin-bottom: 50px;
+    }
+    @include laptop {
+      padding-top: 34px;
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      flex-direction: column;
+      padding-top: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    align-self: center;
+    &:after {
+      content: "-15%";
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      width: 88px;
+      height: 88px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 88px;
+      -moz-border-radius: 44px;
+      -webkit-border-radius: 44px;
+      border-radius: 44px;
+      background-color: $yellow-color;
+      color: $white-color;
+      @include desktop {
+        top: 10px;
+        right: 30px;
+        width: 66px;
+        height: 66px;
+        font-size: 20px;
+        line-height: 66px;
+        -moz-border-radius: 33px;
+        -webkit-border-radius: 33px;
+        border-radius: 33px;
+      }
+      @include laptop {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+      }
+      @include tablet {
+        top: 5px;
+        right: 5px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+        line-height: 32px;
+        -moz-border-radius: 16px;
+        -webkit-border-radius: 16px;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &__img {
+    flex-basis: 757px;
+    @include desktop {
+      flex-basis: 540px;
+    }
+    @include laptop {
+      flex-basis: 380px;
+    }
+    @include tablet {
+      flex-basis: 280px;
+    }
+  }
+
+  &__card {
+    flex-basis: 420px;
+    box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 40px;
+    align-self: center;
+    @include desktop {
+      flex-basis: 300px;
+      padding: 25px 20px;
+    }
+
+    @include tablet {
+      box-shadow: none;
+      flex-basis: 241px;
+      border-radius: 0;
+
+      &:after {
+        content: "";
+        width: 100vw;
+        height: 251px;
+        position: absolute;
+        left: 0;
+        top: 295px;
+        //margin: 0 50vw 0 calc(100px - 50vw);
+        z-index: -1;
+        box-shadow: 0px 1px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    margin-bottom: 7px;
+    @include desktop {
+      margin-bottom: 16px;
+    }
+    @include tablet {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__new-price {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    color: $lightred-color;
+    margin-right: 25px;
+    @include desktop {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+      margin-right: 18px;
+    }
+  }
+  &__old-price {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    text-decoration-line: line-through;
+    align-self: center;
+    @include desktop {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  &__additional {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    color: $blue-color;
+
+    &_icon_left {
+      padding-left: 37px;
+      @include desktop {
+        padding-left: 29px;
+      }
+      @include tablet {
+        padding-left: 18px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: 0;
+        background-image: url("/img/product/bx-bell.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        @include desktop {
+          width: 22px;
+          height: 22px;
+        }
+        @include tablet {
+          width: 14px;
+          height: 14px;
+          top: 0;
+        }
+      }
+    }
+    @include desktop {
+      font-size: 14px;
+      line-height: 18.2px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 15.6px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @include tablet {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__button-add {
+    width: 234px;
+    height: 55px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.8px;
+    border: none;
+    border-radius: 10px;
+    background-color: $blue-color;
+    color: $white-color;
+    margin-right: 23px;
+    @include desktop {
+      width: 202px;
+      height: 45px;
+      margin-right: 21px;
+    }
+    @include tablet {
+      width: 148px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 12px;
+      line-height: 15.6px;
+      margin-right: 17px;
+    }
+  }
+  &__button-like {
+    background-color: transparent;
+    border: none;
+    align-self: center;
+  }
+
+  &__button-svg {
+    width: 33px;
+    height: 33px;
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 73px;
+    @include desktop {
+      gap: 60px;
+    }
+    @include tablet {
+      gap: 33px;
+    }
+  }
+
+  &__info-block {
+    margin-bottom: 33px;
+    @include tablet {
+      margin-bottom: 22px;
+    }
+  }
+  &__info-title {
+    color: $lightgrey-color;
+    margin-bottom: 5px;
+  }
+  &__info-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.8px;
+    @include tablet {
+      font-size: 12px;
+      line-height: 15.6px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 41.6px;
+    margin-bottom: 20px;
+    @include desktop {
+      font-size: 24px;
+      line-height: 31.2px;
+    }
+    @include laptop {
+      font-size: 18px;
+      line-height: 23.4px;
+      margin-bottom: 10px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 20.8px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__text {
+    max-width: 1234px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    @include desktop {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    @include laptop {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include tablet {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

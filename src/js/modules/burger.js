@@ -1,5 +1,5 @@
 import { getElements } from "./getElements.js";
-import { openAnimationBurger, closeAnimationBurger } from "./animation.js";
+//import { openAnimationBurger, closeAnimationBurger } from "./animation.js";
 
 const { page, burgerMenu, burger, btnBurger } = getElements();
 
@@ -17,13 +17,16 @@ const closeBurger = () => {
 
 export const addOpenBurger = () => {
   btnBurger.addEventListener("click", () => {
-    if (!burger.classList.contains("burger_visible")) {
-      openAnimationBurger(burgerMenu, burger);
-    }
-    if (burger.classList.contains("burger_visible")) {
-      closeAnimationBurger(burgerMenu);
-    }
-    burger.classList.toggle("burger_visible");
+    // if (!burger.classList.contains("burger_visible")) {
+    //   //openAnimationBurger(burgerMenu, burger);
+    //   //burgerMenu.style.height = `${burgerMenu.scrollHeight}px`;
+    // }
+    // if (burger.classList.contains("burger_visible")) {
+    //   //closeAnimationBurger(burgerMenu);
+    //   //burgerMenu.style.height = '';
+    // }
+    
+    burger.classList.toggle("burger_visible"); 
     changeBtnBurger();
     pageOverfow();
   });
@@ -36,7 +39,7 @@ export const addCloseBurger = () => {
       (e.target.closest(".header__container") &&
         !e.target.closest(".header__button-nav"))
     ) {
-      closeAnimationBurger(burgerMenu);
+      //closeAnimationBurger(burgerMenu);
       closeBurger();
       pageOverfow();
     }
@@ -49,10 +52,10 @@ const pageOverfow = () => {
     page.style.overflow = "hidden";
     page.style.marginRight = `${getScrollBarSize(bodyWidth)}px`;
   } else {
-    setTimeout(function () {
+    //setTimeout(function () {
       page.style.overflow = "";
       page.style.marginRight = "";
-    }, 500);
+    //}, 50);
   }
 };
 

@@ -2,6 +2,8 @@
   position: relative;
   padding-top: 31px;
   padding-bottom: 45px;
+  z-index: 110;
+  background-color: $white-color;
   @include desktop {
     padding-top: 40px;
     padding-bottom: 15px;

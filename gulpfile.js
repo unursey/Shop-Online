@@ -15,10 +15,16 @@ import gulpWebp from 'gulp-webp';
 import gulpAvif from 'gulp-avif';
 import { stream as critical } from "critical";
 import gulpif from 'gulp-if';
+import autoprefixer from "gulp-autoprefixer";
+import babel from "gulp-babel";
 
 const prepros = true;
 
 let dev = false;
+
+const allJS = [
+  "src/libs/swiper-bundle.min.js",
+];
 
 const sass = gulpSass(sassPkg);
 
@@ -42,6 +48,7 @@ export const style = () => {
       .src("src/scss/**/*.scss")
       .pipe(gulpif(dev, soursemaps.init()))
       .pipe(sass().on("error", sass.logError))
+      .pipe(autoprefixer())
       .pipe(
         cleanCSS({
           2: {
@@ -62,6 +69,7 @@ export const style = () => {
         extensions: ["css"],
       })
     )
+    .pipe(autoprefixer())
     .pipe(
       cleanCSS({
         2: {
@@ -92,9 +100,13 @@ const configWebpack = {
 
 export const js = () =>
   gulp
-    .src("src/js/script.js")
+    .src([...allJS, "src/js/script.js"])
     .pipe(webpack(configWebpack))
     .pipe(gulpif(dev, soursemaps.init()))
+    .pipe(babel({
+      presets: ['@babel/preset-env'],
+      ignore: [...allJS, 'src/js/**/*.min.js']
+    }))
     .pipe(terser())
     .pipe(concat("index.min.js"))
     .pipe(gulpif(dev, soursemaps.write('../maps')))

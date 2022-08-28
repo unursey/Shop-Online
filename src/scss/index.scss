@@ -1,6 +1,7 @@
 
 @import 'components/normalize';
 @include normalize();
+@import "libs/swiper-bundle.min.css";
 @import 'components/var';
 @import "components/fonts";
 @import "components/basic";
@@ -15,3 +16,5 @@
 @import "components/article";
 @import "components/crumbs";
 @import "components/burger";
+@import "components/product";
+@import "components/recommend";
