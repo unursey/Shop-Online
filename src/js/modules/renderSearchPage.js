@@ -7,7 +7,6 @@ const btnSearch = document.querySelector('.form-search__button');
 btnSearch.addEventListener('click', (e) => {
   e.preventDefault();
   const text = input.value;
-  console.log('text: ', text);
   if (text !== '') {
     getRenderSearchGoods(text);
   } else {

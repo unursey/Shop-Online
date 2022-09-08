@@ -7,9 +7,7 @@ export const loadImg = (img, src) => {
     };
 
     img.onerror = () => {
-      reject(new Error("Error!"));
-
-      console.log("я запустился", 111);     
+      reject(new Error("Error!"));  
       img.src = `${urlPic}image/error.jpg`;
           
     };

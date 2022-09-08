@@ -236,7 +236,7 @@
   &__input:checked + &__checkbox:before {
     border-color: $blue-color;
     background-color: $blue-color;
-    background-image: url("/img/cart/checked.svg");
+    background-image: url("../img/cart/checked.svg");
   }
 
   &__block-checkbox {
@@ -256,7 +256,7 @@
     border: 1px solid $linegrey-color;
     border-radius: 10px;
     overflow: hidden;
-    align-self: center;
+    align-self: top;
     @include laptop {
       width: 91px;
       height: 91px;

@@ -19,35 +19,35 @@
     padding-top: 0;
     padding-bottom: 52px;
   }
+}
 
-  &__title {
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 65px;
-    color: $brown-color;
-    margin-bottom: 40px;
-    @include desktop {
-      font-size: 40px;
-      line-height: 52px;
-      margin-bottom: 30px;
-    }
-    @include laptop {
-      font-size: 28px;
-      line-height: 36.4px;
-      margin-bottom: 20px;
-    }
-    @include tablet {
-      font-size: 18px;
-      line-height: 23.4px;
-      margin-bottom: 10px;
-    }
+.page__title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 65px;
+  color: $brown-color;
+  margin-bottom: 40px;
+  @include desktop {
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 30px;
+  }
+  @include laptop {
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    font-size: 18px;
+    line-height: 23.4px;
+    margin-bottom: 10px;
   }
 }
 
 .article {
   flex-basis: 1095px;
   @include desktop {
-      flex-basis: 620px;
+    flex-basis: 620px;
   }
   @include laptop {
     flex-basis: 100%;
@@ -75,8 +75,8 @@
       font-size: 18px;
       line-height: 27px;
       margin-bottom: 60px;
-    }   
-    @include laptop  {
+    }
+    @include laptop {
       font-size: 16px;
       line-height: 20.8px;
       margin-bottom: 35px;
@@ -113,7 +113,7 @@
       padding-left: 26px;
       align-self: flex-end;
     }
-    @include laptop  {
+    @include laptop {
       font-size: 14px;
       line-height: 18.2px;
       padding-left: 23px;
@@ -199,7 +199,7 @@
       margin-bottom: 23px;
       margin-right: 40px;
       align-self: flex-end;
-    } 
+    }
   }
 
   &__views,
@@ -213,12 +213,12 @@
     padding-left: 30px;
     vertical-align: middle;
     align-items: center;
-    @include desktop {    
+    @include desktop {
       font-size: 14px;
       line-height: 18.2px;
       padding-left: 25px;
     }
-    @include tablet { 
+    @include tablet {
       font-size: 8px;
       line-height: 10.8px;
       padding-left: 12px;
@@ -253,5 +253,3 @@
     }
   }
 }
-
-

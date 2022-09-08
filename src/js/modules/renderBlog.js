@@ -137,7 +137,6 @@ export const renderArticle = async (id) => {
 };
 
 export const createPage = () => {
-  if (location.pathname === "/blog.html") {
     let page = "?page=1";
     let pageNum = 1;
 
@@ -150,14 +149,11 @@ export const createPage = () => {
 
     renderGoods(page, pageNum);
     sessionStorage.setItem('backurl', page);
-  }
 };
 
 export const createArticle = () => {
-  if (location.pathname === "/article.html") {
     let params = new URL(document.location).searchParams;
     let id = "/" + params.get("id");
     renderArticle(id);
-  }
 };
 

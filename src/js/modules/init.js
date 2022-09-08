@@ -14,16 +14,22 @@ export const init = () => {
   addOpenBurger();
   addCloseBurger();
   getRenderCategory();
-  createPage();
-  createArticle();
   countShoppingCart();
   renderSearchPage();
+
+  if (location.pathname === "/blog.html") {
+    createPage();
+  }
+
+  if (location.pathname === "/article.html") {
+    createArticle();
+  }
 
   if (location.pathname === "/category.html") {
     getRenderCategoryPage();
   }
 
-  if (location.pathname === "/index.html") {
+  if ((location.pathname === "/index.html") || (location.pathname === "/")) {
     getRenderDiscountGoods();
   }
 
@@ -36,10 +42,6 @@ export const init = () => {
     getRenderDiscountGoods();
     countShoppingCartIn();
   }
-
-  // if (location.pathname === "/search.html") {
-  //   renderSearchPage();
-  // }
 
   const mediaQuery = window.matchMedia("(max-width: 580px)");
 

@@ -24,7 +24,6 @@ export const renderCategoryPage = (err, data) => {
 };
 
 export const renderSearchPage = (err, data) => {
-  console.log("data search получена: ", data);
   if (err) {
     console.warn(err, data);
     return;
@@ -33,11 +32,17 @@ export const renderSearchPage = (err, data) => {
   const container = document.createElement('div');
   container.className = "container";
 
+  const title = document.createElement('h1');
+  title.className = "card-product__title";
+
+  container.append(title);
+
   if (data.length !== 0) {
       const list = createPage(data);
       container.append(list);
+      title.textContent = 'Вот что мы нашли...'
   } else {
-    container.textContent = 'По Вашему запросу ничего не найдено.'
+    title.textContent = 'По Вашему запросу ничего не найдено.'
   }
   section.append(container);
   document.querySelector('.main').innerHTML = '';
@@ -54,7 +59,8 @@ export const renderDiscountPage = (err, data) => {
       console.warn(err, data);
       return;
     }
-    const list = createPage(data);
+    const num = 8;
+    const list = createPage(data, num);
     document.querySelector(".profit__container").append(list);
 
     const img = document.querySelectorAll('.card-product__img');
@@ -63,7 +69,7 @@ export const renderDiscountPage = (err, data) => {
     })  
 };
 
-const createPage = (data) => {
+const createPage = (data, num) => {
   const list = document.createElement("ul");
   list.className = "card-product__wrapper";
   const goods = data.map((item) => {
@@ -87,7 +93,7 @@ const createPage = (data) => {
     cart.insertAdjacentHTML(
         "afterbegin", `
         <a href="product.html?id=${item.id}">
-        <picture>
+        <div class="card-product__img-block">
             <img
             class="card-product__img"
             src="${urlPic}${item.image}"
@@ -96,7 +102,7 @@ const createPage = (data) => {
             height="295"
             />
             
-        </picture>
+        </div>
         <p class="card-product__text">
         <div class="card-product__price">
             <span class="card-product__new-price">${price}</span>
@@ -110,7 +116,10 @@ const createPage = (data) => {
     cart.append(label);
     return cart;
   });
-
+if (num) {
+  list.append(...goods.slice(0, num));
+} else {
   list.append(...goods);
+}
   return list;
 };
