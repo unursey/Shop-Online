@@ -70,75 +70,72 @@
     }
   }
 
-  &__picture {
-    position: relative;
-    align-self: center;
-    &:after {
-      content: "-15%";
-      position: absolute;
-      top: 20px;
-      right: 50px;
-      display: inline-block;
-      text-align: center;
-      vertical-align: middle;
-      width: 88px;
-      height: 88px;
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 88px;
-      -moz-border-radius: 44px;
-      -webkit-border-radius: 44px;
-      border-radius: 44px;
-      background-color: $yellow-color;
-      color: $white-color;
-      @include desktop {
-        top: 10px;
-        right: 30px;
-        width: 66px;
-        height: 66px;
-        font-size: 20px;
-        line-height: 66px;
-        -moz-border-radius: 33px;
-        -webkit-border-radius: 33px;
-        border-radius: 33px;
-      }
-      @include laptop {
-        width: 50px;
-        height: 50px;
-        font-size: 16px;
-        line-height: 50px;
-        -moz-border-radius: 25px;
-        -webkit-border-radius: 25px;
-        border-radius: 25px;
-      }
-      @include tablet {
-        top: 5px;
-        right: 5px;
-        width: 32px;
-        height: 32px;
-        font-size: 12px;
-        line-height: 32px;
-        -moz-border-radius: 16px;
-        -webkit-border-radius: 16px;
-        border-radius: 16px;
-      }
+  &__discount {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 88px;
+    height: 88px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 88px;
+    -moz-border-radius: 44px;
+    -webkit-border-radius: 44px;
+    border-radius: 44px;
+    background-color: $yellow-color;
+    color: $white-color;
+    @include desktop {
+      top: 10px;
+      right: 30px;
+      width: 66px;
+      height: 66px;
+      font-size: 20px;
+      line-height: 66px;
+      -moz-border-radius: 33px;
+      -webkit-border-radius: 33px;
+      border-radius: 33px;
+    }
+    @include laptop {
+      width: 50px;
+      height: 50px;
+      font-size: 16px;
+      line-height: 50px;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+    }
+    @include tablet {
+      top: 5px;
+      right: 5px;
+      width: 32px;
+      height: 32px;
+      font-size: 12px;
+      line-height: 32px;
+      -moz-border-radius: 16px;
+      -webkit-border-radius: 16px;
+      border-radius: 16px;
     }
   }
 
+  &__picture {
+    position: relative;
+    align-self: center;
+  }
+
   &__img {
-    flex-basis: 757px;
-    @include desktop {
-      flex-basis: 540px;
-    }
-    @include laptop {
-      flex-basis: 380px;
-    }
+    display: block;
+    max-height: 427px;
+    object-fit: contain;
     @include tablet {
-      flex-basis: 280px;
+      height: 160px;
     }
   }
 
   &__card {
+    position: relative;
     flex-basis: 420px;
     box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
@@ -153,15 +150,14 @@
       box-shadow: none;
       flex-basis: 241px;
       border-radius: 0;
-
       &:after {
         content: "";
         width: 100vw;
         height: 251px;
         position: absolute;
         left: 0;
-        top: 295px;
-        //margin: 0 50vw 0 calc(100px - 50vw);
+        top: 0;
+        margin: 0 0 0 calc(120px - 50vw);
         z-index: -1;
         box-shadow: 0px 1px 4px 4px rgba(0, 0, 0, 0.25);
       }
@@ -217,37 +213,6 @@
     font-weight: 700;
     line-height: 20.8px;
     color: $blue-color;
-
-    &_icon_left {
-      padding-left: 37px;
-      @include desktop {
-        padding-left: 29px;
-      }
-      @include tablet {
-        padding-left: 18px;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: -3px;
-        left: 0;
-        background-image: url("/img/product/bx-bell.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 24px;
-        height: 24px;
-        @include desktop {
-          width: 22px;
-          height: 22px;
-        }
-        @include tablet {
-          width: 14px;
-          height: 14px;
-          top: 0;
-        }
-      }
-    }
     @include desktop {
       font-size: 14px;
       line-height: 18.2px;
@@ -263,6 +228,39 @@
       }
     }
   }
+
+  &__additional-btn {
+    background-color: transparent;
+    border: none;
+    padding-left: 37px;
+    @include desktop {
+      padding-left: 29px;
+    }
+    @include tablet {
+      padding-left: 18px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 0;
+      background-image: url("/img/product/bx-bell.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      @include desktop {
+        width: 22px;
+        height: 22px;
+      }
+      @include tablet {
+        width: 14px;
+        height: 14px;
+        top: 0;
+      }
+    }
+  }
+
   &__button {
     display: flex;
     margin-bottom: 30px;
@@ -281,6 +279,16 @@
     background-color: $blue-color;
     color: $white-color;
     margin-right: 23px;
+    &:hover{
+      background-color: $matteblue-color;
+    }
+    &:focus {
+      background-color: $darkblue-color;
+      outline: none;
+    }
+    &:active {
+      background-color: $matteblue-color;
+    }
     @include desktop {
       width: 202px;
       height: 45px;
@@ -299,6 +307,12 @@
     background-color: transparent;
     border: none;
     align-self: center;
+  }
+  &__button-like:focus &__button-svg {
+    fill: $darker-than-lightgrey-color;
+  }
+  &__button-like:active &__button-svg {
+    fill: $lightred-color;
   }
 
   &__button-svg {

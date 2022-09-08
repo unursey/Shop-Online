@@ -8,24 +8,8 @@
   <base href="https://unursey.github.io/Shop-Online/">
   <link rel="icon" type="image/svg+xml" href="" />
 
-  <!-- <link
-      rel="preload"
-      href="fonts/lato-400.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/lato-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    /> -->
-
   <title>Modul07 Lesson04</title>
 
-  <!-- <link rel="stylesheet" href="css/index.css" /> -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const createLink = url => {
@@ -154,174 +138,154 @@
       </div>
     </div>
 
-  <div class="main">  
-    <h1 class="visually-hidden">Сайт онлайн магазина ShopOnline</h1>
+    <div class="main">
+      <h1 class="visually-hidden">Корзина онлайн магазина ShopOnline</h1>
 
-    <section class="present">
-      <ul class="container present__container">
-        <li class="present__gallery present__gallery-one">
-          <a class="present__link" href="product.html">
-            <picture>
-              <source media="(max-width: 520px)" srcset="img/present/timer-mob.avif" type="image/avif">
-              <source media="(max-width: 520px)" srcset="img/present/timer-mob.webp" type="image/webp">
-              <source media="(max-width: 520px)" srcset="img/present/timer-mob.jpg" type="image/jpg">
+      <section class="shopping-cart">
+        <div class="container shopping-cart__container">
+          <div class="shopping-cart__crumbs crumbs">
+            <p class="crumbs__text"><a href="index.html">Главная</a></p>
+            <svg class="crumbs__icon" width="18" height="18" viewBox="0 0 18 18" fill="#525252"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.44238 12.4425L9.87738 9L6.44238 5.5575L7.49988 4.5L11.9999 9L7.49988 13.5L6.44238 12.4425Z"
+                fill="#525252" />
+            </svg>
+            <p class="crumbs__text">Корзина</p>
+          </div>
 
-              <source srcset="img/present/timer.avif" type="image/avif">
-              <source srcset="img/present/timer.webp" type="image/webp">
-              <img class="present__img" src="img/present/timer.jpg" alt="Ноутбуки" width="1770" height="480" />
-            </picture>
-            <p class="present__text present__text-one">
-              -50% на все ноутбуки
-            </p>
-            <div class="present__timer" data-timer-deadline="15/09/2022 03:00"></div>
-          </a>
-        </li>
+          <div class="shopping-cart__form">
+            <div class="shopping-cart__wrapper">
+              <div class="shopping-cart__block">
+                <div class="shopping-cart__block-container">
+                  <div class="shopping-cart__title-block">
+                    <h2 class="shopping-cart__title">Корзина</h2>
+                    <div class="shopping-cart__cart-count">2</div>
+                  </div>
 
-        <li class="present__gallery present__gallery-two">
-          <a href="#">
-            <picture>
-              <source srcset="img/present/1.avif" type="image/avif">
-              <source srcset="img/present/1.webp" type="image/webp">
-              <img class="present__img" src="img/present/1.jpg" alt="Книга" width="245" height="228" />
-            </picture>
-            <p class="present__text present__text-two">
-              <span class="present__text_bold">Книга –</span> лучший подарок
-            </p>
-          </a>
-        </li>
+                  <div class="shopping-cart__control">
+                    <label class="shopping-cart__bold-text">
+                      <input class="shopping-cart__input shopping-cart__checkbox-parent" type="checkbox">
+                      <span class="shopping-cart__checkbox">
+                        Выбрать все
+                      </span>
+                    </label>
 
-        <li href="#" class="present__gallery present__gallery-three">
-          <a href="#">
-            <picture>
-              <source srcset="img/present/2.avif" type="image/avif">
-              <source srcset="img/present/2.webp" type="image/webp">
-              <img class="present__img" src="img/present/2.jpg" alt="Время скидок" width="245" height="228" />
-            </picture>
-            <p class="present__text present__text-three">
-              Время скидок!
-            </p>
-          </a>
-        </li>
+                    <button class="shopping-cart__btn shopping-cart__trash" aria-label="Удалить выделенные товары">
+                      <svg class="shopping-cart__btn-del" width="18" height="24" viewBox="0 0 18 24" fill="#C9C9C9"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M13.0214 2.35355L13.1679 2.5H13.375H17.25V4H0.75V2.5H4.625H4.83211L4.97855 2.35355L6.08211 1.25H11.9179L13.0214 2.35355ZM4 22.75C2.90114 22.75 2 21.8489 2 20.75V6.25H16V20.75C16 21.8489 15.0989 22.75 14 22.75H4Z"
+                          fill="#C9C9C9" stroke="#C9C9C9" />
+                      </svg>
+                    </button>
+                  </div>
 
-        <li href="#" class="present__gallery present__gallery-four">
-          <a href="#">
-            <picture>
-              <source srcset="img/present/3.avif" type="image/avif">
-              <source srcset="img/present/3.webp" type="image/webp">
-              <img class="present__img" src="img/present/3.jpg" alt="Обувь" width="550" height="228" />
-            </picture>
-          </a>
-        </li>
+                  <ul class="shopping-cart__list">
+                  </ul>
+                </div>
+              </div>
 
-        <li href="#" class="present__gallery present__gallery-five">
-          <a href="#">
-            <picture>
-              <source srcset="img/present/4.avif" type="image/avif">
-              <source srcset="img/present/4.webp" type="image/webp">
-              <img class="present__img" src="img/present/4.jpg" alt="Кроссовки" width="550" height="516" />
-            </picture>
-            <p class="present__text present__text-five">
-              Вторая пара кроссовок
-              <span class="present__text_big">в&nbspподарок!</span>
-            </p>
-          </a>
-        </li>
+              <div class="shopping-cart__block">
+                <div class="shopping-cart__block-container">
+                  <div class="shopping-cart__block-content">
+                    <h2 class="shopping-cart__title">Способ доставки</h2>
+                    <button class="shopping-cart__bold-text shopping-cart__edit"
+                      aria-label="Изменить способ доставки">Изменить</button>
+                  </div>
 
-        <li href="#" class="present__gallery present__gallery-six">
-          <a href="#">
-            <picture>
-              <source srcset="img/present/5.avif" type="image/avif">
-              <source srcset="img/present/5.webp" type="image/webp">
-              <img class="present__img" src="img/present/5.jpg" alt="Подарки" width="550" height="228" />
-            </picture>
-            <p class="present__text present__text-six">
-              Идеи новогодних подарков
-            </p>
-          </a>
-        </li>
+                  <div class="shopping-cart__delivery-method">
+                    <p class="shopping-cart__light-text shopping-cart__point">Пункт выдачи</p>
 
-        <li href="#" class="present__gallery present__gallery-seven">
-          <a href="#">
-            <picture>
-              <source srcset="img/present/6.avif" type="image/avif">
-              <source srcset="img/present/6.webp" type="image/webp">
-              <img class="present__img" src="img/present/6.jpg" alt="Техника" width="550" height="228" />
-            </picture>
-            <p class="present__text present__text-seven">
-              Выгодно в декабре!
-            </p>
-          </a>
-        </li>
+                    <div>
+                      <p class="shopping-cart__text shopping-cart__point-adress">г. Москва (Московская область), улица
+                        Павлика
+                        Морозова, д. 48, (Пункт выдачи), Ежедневно 10:00-21:00</p>
 
-        <li href="#" class="present__gallery present__gallery-eight">
-          <a href="#">
-            <picture>
-              <source media="(max-width: 520px)" srcset="img/present/7-mob.avif" type="image/avif">
-              <source media="(max-width: 520px)" srcset="img/present/7-mob.webp" type="image/webp">
-              <source media="(max-width: 520px)" srcset="img/present/7-mob.jpg" type="image/jpg">
+                      <p class="shopping-cart__light-text shopping-cart__delivery-mix">Бесплатная доставка</p>
+                    </div>
 
-              <source srcset="img/present/7.avif" type="image/avif">
-              <source srcset="img/present/7.webp" type="image/webp">
-              <img class="present__img" src="img/present/7.jpg" alt="Украшения на Новый год" width="1160"
-                height="516" />
-            </picture>
-            <p class="present__text present__text-eight">
-              Новогодние украшения
-            </p>
-          </a>
-        </li>
+                    <p class="shopping-cart__light-text shopping-cart__delivery">Стоимость доставки</p>
+                    <p class="shopping-cart__text shopping-cart__delivery-cost">Бесплатно</p>
 
-        <li href="#" class="present__gallery present__gallery-nine">
-          <a href="#">
-            <picture>
-              <source media="(max-width: 520px)" srcset="img/present/8-mob.avif" type="image/avif">
-              <source media="(max-width: 520px)" srcset="img/present/8-mob.webp" type="image/webp">
-              <source media="(max-width: 520px)" srcset="img/present/8-mob.jpg" type="image/jpg">
+                    <p class="shopping-cart__bold-text">10-13 февраля</p>
+                    <div class="shopping-cart__block-preview">
 
-              <source srcset="img/present/8.avif" type="image/avif">
-              <source srcset="img/present/8.webp" type="image/webp">
-              <img class="present__img" src="img/present/8.jpg" alt="Одежда" width="245" height="516" />
-            </picture>
-          </a>
-        </li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <li href="#" class="present__gallery present__gallery-ten">
-          <a href="#">
-            <picture>
-              <source srcset="img/present/9.avif" type="image/avif">
-              <source srcset="img/present/9.webp" type="image/webp">
-              <img class="present__img" src="img/present/9.jpg" alt="Бытовая химия" width="245" height="228" />
-            </picture>
-            <p class="present__text present__text-ten">
-              На бытовую химию
-            </p>
-          </a>
-        </li>
+            <div class="shopping-cart__block shopping-cart__block-total">
+              <div class="shopping-cart__total-container">
+                <div class="shopping-cart__block-sum">
+                  <p class="shopping-cart__text-price">Итого:</p>
+                  <p class="shopping-cart__text-price shopping-cart__total-new">0 ₽</p>
+                </div>
 
-        <li href="#" class="present__gallery present__gallery-eleven">
-          <a href="#">
-            <picture>
-              <source media="(max-width: 520px)" srcset="img/present/10-mob.avif" type="image/avif">
-              <source media="(max-width: 520px)" srcset="img/present/10-mob.webp" type="image/webp">
-              <source media="(max-width: 520px)" srcset="img/present/10-mob.jpg" type="image/jpg">
+                <div class="shopping-cart__sum">
+                  <div class="shopping-cart__block-sum">
+                    <p class="shopping-cart__light-text">Товары, <span class="shopping-cart__total-count">0</span> шт.
+                    </p>
+                    <p class="shopping-cart__light-text shopping-cart__total-old">0 ₽</p>
+                  </div>
 
-              <source srcset="img/present/10.avif" type="image/avif">
-              <source srcset="img/present/10.webp" type="image/webp">
-              <img class="present__img present__img_transform_scale" src="img/present/10.jpg" alt="Елочные украшения"
-                width="245" height="228" />
-            </picture>
-        </li>
-        </a>
-      </ul>
-    </section>
+                  <div class="shopping-cart__block-sum">
+                    <p class="shopping-cart__light-text">Скидка</p>
+                    <p class="shopping-cart__light-text shopping-cart__total-discount">0 ₽</p>
+                  </div>
 
-    <section class="profit">
-      <div class="container profit__container card-product">
-        <h2 class="card-product__title">Это выгодно!</h2>
+                  <div class="shopping-cart__block-sum">
+                    <p class="shopping-cart__light-text">Доставка</p>
+                    <p class="shopping-cart__light-text">Бесплатно</p>
+                  </div>
+                </div>
 
-      </div>
-    </section>
-  </div>
+                <div class="shopping-cart__sum">
+                  <div class="shopping-cart__block-sum">
+                    <p class="shopping-cart__bold-text">Доставка: </p>
+                    <p class="shopping-cart__bold-text shopping-cart__bold-text_color_blue">Пункт
+                      выдачи</p>
+                  </div>
+                  <div class="shopping-cart__deliv-more">
+                    <p class="shopping-cart__light-text">Ежедневно 10:00 - 21:00</p>
+                    <p class="shopping-cart__light-text">г. Москва (Московская область), улица Павлика Морозова, д. 48
+                    </p>
+                  </div>
+                </div>
+
+                <div class="shopping-cart__block-sum">
+                  <p class="shopping-cart__bold-text">Дата: </p>
+                  <p class="shopping-cart__bold-text shopping-cart__bold-text_color_blue">10-13
+                    февраля</p>
+                </div>
+
+                <div class="shopping-cart__block-sum">
+                  <p class="shopping-cart__bold-text">Оплата: </p>
+                  <p class="shopping-cart__bold-text shopping-cart__bold-text_color_blue">Картой</p>
+                </div>
+                <button class="shopping-cart__bold-text shopping-cart__button" type="submit">Заказать</button>
+
+                <label class="shopping-cart__light-text">
+                  <input class="shopping-cart__input" type="checkbox">
+                  <span class="shopping-cart__checkbox">
+                    <span><span class="shopping-cart__light-text shopping-cart__light-text_color_grey">Согласен с
+                        условиями</span> правил пользования торговой площадкой и правилами возврата</span>
+                  </span>
+                </label>
+              </div>
+
+              </form>
+            </div>
+      </section>
+
+      <section class="profit">
+        <div class="container profit__container card-product">
+          <h2 class="card-product__title">Это выгодно!</h2>
+
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
@@ -334,16 +298,6 @@
         <h2 class="footer__title footer__title_icon collapse__title">Каталог</h2>
         <div class="footer__block-list collapse__block">
           <ul class="footer__list category">
-            <!-- <li class="category__text"><a href="product.html">Смартфоны</a></li>
-              <li class="category__text"><a href="product.html">Ноутбуки</a></li>
-              <li class="category__text"><a href="product.html">Ювелирные изделия</a></li>
-              <li class="category__text"><a href="product.html">Одежда</a></li>
-              <li class="category__text"><a href="product.html">Бытовая техника</a></li>
-              <li class="category__text"><a href="product.html">Бытовая химия</a></li>
-              <li class="category__text"><a href="product.html">Книги и журналы</a></li>
-              <li class="category__text"><a href="product.html">Домашний текстиль</a></li>
-              <li class="category__text"><a href="product.html">Электроника</a></li>
-              <li class="category__text"><a href="product.html">Косметика</a></li> -->
           </ul>
         </div>
       </div>

@@ -1,4 +1,4 @@
-.profit {
+.card-product {
   padding-bottom: 137px;
   @include desktop {
     padding-bottom: 100px;
@@ -54,7 +54,7 @@
   &__img {
     width: 100%;
     height: 295px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: bottom;
     border-radius: 14px;
     margin-bottom: 20px;
@@ -130,7 +130,7 @@
     position: relative;
   }
 
-  &__gallery:after {
+  &__discount {
     position: absolute;
     top: 187px;
     left: 20px;
@@ -169,30 +169,5 @@
       -webkit-border-radius: 20px;
       border-radius: 20px;
     }
-  }
-
-  &__gallery-one:after {
-    content: "-50%";
-  }
-  &__gallery-two:after {
-    content: "-40%";
-  }
-  &__gallery-three:after {
-    content: "-10%";
-  }
-  &__gallery-four:after {
-    content: "-30%";
-  }
-  &__gallery-five:after {
-    content: "-10%";
-  }
-  &__gallery-six:after {
-    content: "-30%";
-  }
-  &__gallery-seven:after {
-    content: "-30%";
-  }
-  &__gallery-eight:after {
-    content: "-50%";
   }
 }

@@ -238,12 +238,14 @@
     width: 37px;
     height: 37px;
     outline: none;
-    &:hover,
-    &:focus {
-      fill: $blue-color;
+    &:hover {
+      fill: $matteblue-color;
     }
     &:focus {
-      outline: 1px solid $blue-color;
+      fill: $darkblue-color;
+    }
+    &:active {
+      fill: $matteblue-color;
     }
   }
 
@@ -265,9 +267,16 @@
     border-radius: 5px;
     color: $darkgrey-color;
     text-decoration: none;
-    &:hover,
-    &:focus,
-    &_active {
+    &:hover {
+      color: $blue-color;
+      border-color: $blue-color;
+    }
+    &:focus {
+      color: $darkblue-color;
+      border-color: $darkblue-color;
+      outline: none;
+    }
+    &:active, &_active {
       color: $blue-color;
       border-color: $blue-color;
     }

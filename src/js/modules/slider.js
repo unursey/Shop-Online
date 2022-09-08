@@ -1,12 +1,9 @@
 export const swiper = new Swiper(".swiper", {
-  slidesPerView: 4,
-  loop: true,
+  init: false,
+
+  //loop: true,
   //centeredSlides: true,
   spaceBetween: 25,
-
-  autoplay: {
-    delay: 3000,
-  },
 
   breakpoints: {
     320: {
