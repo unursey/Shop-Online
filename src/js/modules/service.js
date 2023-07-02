@@ -3,10 +3,10 @@ import { renderCategoryPage, renderDiscountPage, renderSearchPage } from "./rend
 import { renderProductPage, renderRecommend } from "./renderProductPage.js";
 import { renderShoppingCart } from "./renderShoppingCart.js";
 
-export const URL = "https://limitless-beach-97190.herokuapp.com/api/goods";
-export const urlPic = "https://limitless-beach-97190.herokuapp.com/";
+export const URL = "https://goofy-superb-emmental.glitch.me/api/goods";
+export const urlPic = "https://goofy-superb-emmental.glitch.me/";
 
-const urlCategory = "https://limitless-beach-97190.herokuapp.com/api/category";
+const urlCategory = "https://goofy-superb-emmental.glitch.me/api/category";
 
 export const fetchRequest = async (
   url,

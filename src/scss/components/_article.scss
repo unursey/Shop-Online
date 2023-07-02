@@ -132,7 +132,7 @@
       height: 12px;
       left: 0;
       top: 2px;
-      background-image: url("/img/article/keyboard_backspace.svg");
+      background-image: url("../img/article/keyboard_backspace.svg");
       background-size: contain;
       @include tablet {
         width: 12px;
@@ -235,7 +235,7 @@
   &__views:before {
     width: 20px;
     height: 14px;
-    background-image: url("/img/blog/views.svg");
+    background-image: url("../img/blog/views.svg");
     @include tablet {
       width: 10.41px;
       height: 7.58px;
@@ -246,7 +246,7 @@
   &__comments:before {
     width: 20px;
     height: 20px;
-    background-image: url("/img/blog/comments.svg");
+    background-image: url("../img/blog/comments.svg");
     @include tablet {
       width: 10.83px;
       height: 10.83px;

@@ -207,7 +207,7 @@
   &__views:before {
     width: 20px;
     height: 14px;
-    background-image: url("/img/blog/views.svg");
+    background-image: url("../img/blog/views.svg");
     @include tablet {
       width: 10.41px;
       height: 7.58px;
@@ -217,7 +217,7 @@
   &__comments:before {
     width: 20px;
     height: 20px;
-    background-image: url("/img/blog/comments.svg");
+    background-image: url("../img/blog/comments.svg");
     @include tablet {
       width: 10.83px;
       height: 10.83px;

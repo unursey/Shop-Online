@@ -17,27 +17,27 @@ export const init = () => {
   countShoppingCart();
   renderSearchPage();
 
-  if (location.pathname === "/blog.html") {
+  if (location.pathname === "/Shop-Online/blog.html") {
     createPage();
   }
 
-  if (location.pathname === "/article.html") {
+  if (location.pathname === "/Shop-Online/article.html") {
     createArticle();
   }
 
-  if (location.pathname === "/category.html") {
+  if (location.pathname === "/Shop-Online/category.html") {
     getRenderCategoryPage();
   }
 
-  if ((location.pathname === "/index.html") || (location.pathname === "/")) {
+  if ((location.pathname === "/Shop-Online/index.html") || (location.pathname === "/Shop-Online/")) {
     getRenderDiscountGoods();
   }
 
-  if (location.pathname === "/product.html") {
+  if (location.pathname === "/Shop-Online/product.html") {
     getRenderProductPage();
   }
 
-  if (location.pathname === "/shoppingcart.html") {
+  if (location.pathname === "/Shop-Online/shoppingcart.html") {
     getShoppingCartItem();
     getRenderDiscountGoods();
     countShoppingCartIn();
